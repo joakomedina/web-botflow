@@ -26,6 +26,11 @@ export default function DesarrolloWebPage() {
         eyebrow="Servicio"
         title={service.title}
         description={service.shortDescription}
+        breadcrumbs={[
+          { label: "Inicio", href: "/" },
+          { label: "Servicios", href: "/servicios" },
+          { label: "Desarrollo web" }
+        ]}
         primaryCta={{ label: "Solicitar propuesta", href: "/contacto" }}
         secondaryCta={{ label: "Volver a servicios", href: "/servicios" }}
       />

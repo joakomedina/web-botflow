@@ -11,15 +11,22 @@ type ContactFields = {
   message: string;
 };
 
-const initialFields: ContactFields = {
-  name: "",
-  company: "",
-  email: "",
-  message: ""
+type ContactFormProps = {
+  contextLabel?: string;
+  defaultMessage?: string;
 };
 
-export function ContactForm() {
-  const [fields, setFields] = useState<ContactFields>(initialFields);
+function createInitialFields(defaultMessage: string): ContactFields {
+  return {
+    name: "",
+    company: "",
+    email: "",
+    message: defaultMessage
+  };
+}
+
+export function ContactForm({ contextLabel, defaultMessage = "" }: ContactFormProps) {
+  const [fields, setFields] = useState<ContactFields>(() => createInitialFields(defaultMessage));
   const [feedback, setFeedback] = useState<string>("");
   const [isSendingEmail, setIsSendingEmail] = useState(false);
 
@@ -37,6 +44,30 @@ export function ContactForm() {
     );
   }, [fields]);
 
+  function getTrackingContext() {
+    if (typeof window === "undefined") {
+      return "";
+    }
+
+    const searchParams = new URLSearchParams(window.location.search);
+    const trackingKeys = [
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_term",
+      "utm_content",
+      "gclid",
+      "fbclid"
+    ];
+
+    const trackingLines = trackingKeys
+      .map((key) => [key, searchParams.get(key)] as const)
+      .filter(([, value]) => Boolean(value))
+      .map(([key, value]) => `${key}: ${value}`);
+
+    return trackingLines.join("\n");
+  }
+
   function updateField(field: keyof ContactFields, value: string) {
     setFields((current) => ({ ...current, [field]: value }));
     if (feedback) {
@@ -44,11 +75,13 @@ export function ContactForm() {
     }
   }
 
-  function buildMessage() {
+  function buildMessage(trackingContext: string = getTrackingContext()) {
     return [
       `Hola Joaquin, soy ${fields.name}.`,
+      contextLabel ? `Servicio de interés: ${contextLabel}` : null,
       fields.company ? `Empresa/Proyecto: ${fields.company}` : null,
       `Email: ${fields.email}`,
+      trackingContext ? `\nTracking:\n${trackingContext}` : null,
       "",
       "Mensaje:",
       fields.message
@@ -75,7 +108,9 @@ export function ContactForm() {
     if (!validate()) {
       return;
     }
-    const text = encodeURIComponent(buildMessage());
+
+    const trackingContext = getTrackingContext();
+    const text = encodeURIComponent(buildMessage(trackingContext));
     window.open(`https://wa.me/${siteConfig.whatsappRaw}?text=${text}`, "_blank", "noopener,noreferrer");
     setFeedback("Se abrió WhatsApp con el mensaje listo para enviar.");
   }
@@ -98,6 +133,7 @@ export function ContactForm() {
 
     try {
       setIsSendingEmail(true);
+      const trackingContext = getTrackingContext();
       await emailjs.send(
         emailJsConfig.serviceId as string,
         emailJsConfig.templateId as string,
@@ -105,6 +141,8 @@ export function ContactForm() {
           from_name: fields.name,
           from_email: fields.email,
           company: fields.company || "No especificado",
+          service_context: contextLabel || "Consulta general",
+          tracking: trackingContext || "Sin UTM",
           message: fields.message,
           to_email: siteConfig.email,
           reply_to: fields.email,
@@ -116,7 +154,7 @@ export function ContactForm() {
       );
 
       setFeedback("Mensaje enviado correctamente. Te responderé pronto.");
-      setFields(initialFields);
+      setFields(createInitialFields(defaultMessage));
     } catch {
       openMailClient();
       setFeedback(

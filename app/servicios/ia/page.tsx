@@ -26,6 +26,11 @@ export default function IAPage() {
         eyebrow="Servicio"
         title={service.title}
         description={service.shortDescription}
+        breadcrumbs={[
+          { label: "Inicio", href: "/" },
+          { label: "Servicios", href: "/servicios" },
+          { label: "IA" }
+        ]}
         primaryCta={{ label: "Evaluar caso de IA", href: "/contacto" }}
         secondaryCta={{ label: "Ver servicios", href: "/servicios" }}
       />

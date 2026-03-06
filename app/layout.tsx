@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: "/og-botflow.png",
-        width: 1200,
-        height: 630,
+        url: "/open-graph-botflow.jpeg",
+        width: 1312,
+        height: 736,
         alt: "botflow.top - Sistemas digitales para automatizar negocios"
       }
     ]
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sistemas digitales para automatizar negocios | botflow.top",
     description: siteConfig.description,
-    images: ["/og-botflow.png"]
+    images: ["/open-graph-botflow.jpeg"]
   },
   robots: {
     index: true,

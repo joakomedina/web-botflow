@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { Breadcrumbs, type BreadcrumbItem } from "@/components/Breadcrumbs";
 
 type PageHeroProps = {
   eyebrow: string;
   title: string;
   description: string;
+  breadcrumbs?: BreadcrumbItem[];
   primaryCta?: {
     label: string;
     href: string;
@@ -18,6 +20,7 @@ export function PageHero({
   eyebrow,
   title,
   description,
+  breadcrumbs,
   primaryCta,
   secondaryCta
 }: PageHeroProps) {
@@ -29,6 +32,7 @@ export function PageHero({
             aria-hidden
             className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[color:var(--color-primary)]/12 blur-3xl"
           />
+          {breadcrumbs?.length ? <Breadcrumbs items={breadcrumbs} className="mb-5" /> : null}
           <p className="inline-flex rounded-full border border-[color:var(--panel-border)] bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--color-secondary)]">
             {eyebrow}
           </p>

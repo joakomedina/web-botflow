@@ -24,6 +24,7 @@ export default function SobreMiPage() {
         eyebrow="Sobre mí"
         title="Joaquin Arvelo"
         description="Trabajo con una visión integrada entre personas, negocio y tecnología para construir sistemas digitales que realmente faciliten el trabajo."
+        breadcrumbs={[{ label: "Inicio", href: "/" }, { label: "Sobre mi" }]}
         primaryCta={{ label: "Hablar conmigo", href: "/contacto" }}
       />
       <section className="py-16">

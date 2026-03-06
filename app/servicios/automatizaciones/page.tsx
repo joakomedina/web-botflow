@@ -26,6 +26,11 @@ export default function AutomatizacionesPage() {
         eyebrow="Servicio"
         title={service.title}
         description={service.shortDescription}
+        breadcrumbs={[
+          { label: "Inicio", href: "/" },
+          { label: "Servicios", href: "/servicios" },
+          { label: "Automatizaciones" }
+        ]}
         primaryCta={{ label: "Automatizar procesos", href: "/contacto" }}
         secondaryCta={{ label: "Ver proyectos", href: "/proyectos" }}
       />

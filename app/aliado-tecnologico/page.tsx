@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ContactForm } from "@/components/ContactForm";
 import { CTASection } from "@/components/CTASection";
 import { Reveal } from "@/components/Reveal";
 import { SectionTitle } from "@/components/SectionTitle";
@@ -76,9 +79,9 @@ export const metadata: Metadata = {
       "Servicio para autónomos y pequeños negocios que necesitan organizar su base digital y empezar a automatizar procesos sin complicarse.",
     images: [
       {
-        url: "/og-aliado-tecnologico.png",
-        width: 1200,
-        height: 630,
+        url: "/open-graph-soy-tu-aliado-tecnologico.jpeg",
+        width: 1376,
+        height: 768,
         alt: "Soy tu aliado tecnológico - botflow.top"
       }
     ]
@@ -88,7 +91,7 @@ export const metadata: Metadata = {
     title: "Soy tu aliado tecnológico | botflow.top",
     description:
       "Servicio para autónomos y pequeños negocios que necesitan organizar su base digital y empezar a automatizar procesos sin complicarse.",
-    images: ["/og-aliado-tecnologico.png"]
+    images: ["/open-graph-soy-tu-aliado-tecnologico.jpeg"]
   }
 };
 
@@ -99,29 +102,60 @@ export default function AliadoTecnologicoPage() {
         <div className="container-shell">
           <Reveal>
             <div className="overflow-hidden rounded-3xl border border-indigo-200 bg-gradient-to-br from-indigo-50 to-blue-50 p-8 md:p-11">
-              <p className="inline-flex rounded-full border border-indigo-200 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-700">
-                Servicio paquetizado
-              </p>
-              <h1 className="mt-5 text-balance text-4xl font-semibold leading-tight text-[color:var(--color-dark)] md:text-5xl">
-                Soy tu aliado tecnológico
-              </h1>
-              <p className="mt-5 max-w-3xl text-base leading-relaxed text-[color:var(--color-muted)] md:text-lg">
-                Un servicio pensado para autónomos y pequeños negocios que necesitan organizar su
-                base digital y empezar a automatizar procesos sin complicarse con la tecnología.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Link
-                  href="/contacto?servicio=aliado-tecnologico"
-                  className="btn-base btn-primary px-6 py-3"
-                >
-                  Agendar sesión inicial
-                </Link>
-                <Link
-                  href={`https://wa.me/${siteConfig.whatsappRaw}`}
-                  className="btn-base btn-secondary px-6 py-3"
-                >
-                  Solicitar información
-                </Link>
+              <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+                <div>
+                  <Breadcrumbs
+                    items={[
+                      { label: "Inicio", href: "/" },
+                      { label: "Servicios", href: "/servicios" },
+                      { label: "Tu aliado tecnologico" }
+                    ]}
+                    className="mb-5"
+                  />
+                  <p className="inline-flex rounded-full border border-indigo-200 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-700">
+                    Servicio paquetizado
+                  </p>
+                  <h1 className="mt-5 text-balance text-4xl font-semibold leading-tight text-[color:var(--color-dark)] md:text-5xl">
+                    Soy tu aliado tecnológico
+                  </h1>
+                  <p className="mt-5 max-w-3xl text-base leading-relaxed text-[color:var(--color-muted)] md:text-lg">
+                    Un servicio pensado para autónomos y pequeños negocios que necesitan organizar
+                    su base digital y empezar a automatizar procesos sin complicarse con la
+                    tecnología.
+                  </p>
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <Link
+                      href="#contacto-paquete"
+                      className="btn-base btn-primary px-6 py-3"
+                    >
+                      Agendar sesión inicial
+                    </Link>
+                    <Link
+                      href={`https://wa.me/${siteConfig.whatsappRaw}`}
+                      className="btn-base btn-secondary px-6 py-3"
+                    >
+                      Solicitar información
+                    </Link>
+                  </div>
+                  <Link
+                    href="/"
+                    className="mt-4 inline-flex text-sm font-semibold text-[color:var(--color-dark)] underline underline-offset-4 transition hover:text-[color:var(--color-primary)]"
+                  >
+                    Volver al inicio
+                  </Link>
+                </div>
+                <div className="relative overflow-hidden rounded-2xl border border-indigo-200 bg-white/75">
+                  <div className="relative aspect-[4/3] w-full">
+                    <Image
+                      src="/images/services/soy-tu-aliado-tecnologico.jpeg"
+                      alt="Servicio Tu aliado tecnológico"
+                      fill
+                      priority
+                      sizes="(max-width: 1024px) 100vw, 40vw"
+                      className="object-cover object-center"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </Reveal>
@@ -229,11 +263,54 @@ export default function AliadoTecnologicoPage() {
         </div>
       </section>
 
+      <section id="contacto-paquete" className="scroll-mt-28 py-14">
+        <div className="container-shell grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
+          <Reveal>
+            <article className="panel-card p-7">
+              <SectionTitle
+                eyebrow="Siguiente paso"
+                title="Cuéntame tu caso y te propongo un arranque claro"
+                description="Rellena el formulario y te respondo con una recomendación concreta para implementar este paquete."
+              />
+              <ul className="space-y-3 text-sm text-[color:var(--color-dark)]">
+                {[
+                  "Respuesta inicial por WhatsApp o email.",
+                  "Validación de encaje del paquete para tu negocio.",
+                  "Siguientes pasos y tiempos estimados."
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="mt-1 block h-1.5 w-1.5 rounded-full bg-[color:var(--color-primary)]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6 rounded-xl border border-[color:var(--panel-border)] bg-[color:var(--color-bg)] p-4">
+                <p className="text-sm leading-relaxed text-[color:var(--color-muted)]">
+                  Si prefieres contacto inmediato, también puedes escribir directo por WhatsApp.
+                </p>
+                <Link
+                  href={`https://wa.me/${siteConfig.whatsappRaw}`}
+                  className="btn-base btn-primary mt-4 px-4 py-2 text-sm"
+                >
+                  Abrir WhatsApp
+                </Link>
+              </div>
+            </article>
+          </Reveal>
+          <Reveal delay={0.06}>
+            <ContactForm
+              contextLabel="Paquete Tu aliado tecnológico"
+              defaultMessage="Quiero implementar el paquete Tu aliado tecnológico en mi negocio."
+            />
+          </Reveal>
+        </div>
+      </section>
+
       <CTASection
         title="Construyamos la base digital de tu negocio"
         description="Un único objetivo: ordenar tu sistema digital y convertir visitas en oportunidades reales."
-        buttonText="Agendar sesión inicial"
-        buttonLink="/contacto?servicio=aliado-tecnologico"
+        buttonText="Completar formulario"
+        buttonLink="#contacto-paquete"
       />
     </>
   );

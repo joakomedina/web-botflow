@@ -20,6 +20,7 @@ export default function ServiciosPage() {
         eyebrow="Servicios"
         title="Soluciones diseñadas para conectar tecnología con operación real"
         description="Cada servicio responde al mismo objetivo: convertir procesos manuales y dispersos en un sistema digital claro, escalable y medible."
+        breadcrumbs={[{ label: "Inicio", href: "/" }, { label: "Servicios" }]}
         primaryCta={{ label: "Hablar sobre tu caso", href: "/contacto" }}
         secondaryCta={{ label: "Ver proyectos", href: "/proyectos" }}
       />

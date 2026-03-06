@@ -21,6 +21,7 @@ export default function ProyectosPage() {
         eyebrow="Proyectos"
         title="Casos construidos para conectar procesos, tecnología y automatización"
         description="Proyectos en producción y en desarrollo con un enfoque común: crear sistemas digitales útiles para operación real."
+        breadcrumbs={[{ label: "Inicio", href: "/" }, { label: "Proyectos" }]}
         primaryCta={{ label: "Iniciar nuevo proyecto", href: "/contacto" }}
       />
 

@@ -26,6 +26,11 @@ export default function AppsPage() {
         eyebrow="Servicio"
         title={service.title}
         description={service.shortDescription}
+        breadcrumbs={[
+          { label: "Inicio", href: "/" },
+          { label: "Servicios", href: "/servicios" },
+          { label: "Apps" }
+        ]}
         primaryCta={{ label: "Definir MVP", href: "/contacto" }}
         secondaryCta={{ label: "Ver otros servicios", href: "/servicios" }}
       />

@@ -39,6 +39,7 @@ export default function ContactoPage() {
         eyebrow="Contacto"
         title="Cuéntame qué proceso quieres mejorar"
         description="Podemos empezar por un diagnóstico rápido y definir qué solución te dará mayor impacto primero."
+        breadcrumbs={[{ label: "Inicio", href: "/" }, { label: "Contacto" }]}
       />
       <section className="pb-18">
         <div className="container-shell grid gap-7 lg:grid-cols-[0.85fr_1.15fr]">
