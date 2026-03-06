@@ -21,10 +21,24 @@ jobs:
           COOLIFY_APP_UUID: jkksw80w0c000w04g4ockkg8
         run: |
           set -euo pipefail
-          : "${COOLIFY_API_TOKEN:?Missing COOLIFY_API_TOKEN}"
+          if [ -z "${COOLIFY_API_TOKEN:-}" ]; then
+            echo "::error::Falta el secret COOLIFY_API_TOKEN en GitHub Actions."
+            exit 1
+          fi
 
-          curl -fsS -G \
+          http_code="$(curl -sS -o /tmp/coolify_response.json -w "%{http_code}" -G \
+            --connect-timeout 10 \
+            --max-time 30 \
             -H "Authorization: Bearer ${COOLIFY_API_TOKEN}" \
             -H "Accept: application/json" \
             --data-urlencode "uuid=${COOLIFY_APP_UUID}" \
-            "${COOLIFY_API_URL%/}/deploy"
+            "${COOLIFY_API_URL%/}/deploy")"
+
+          if [ "${http_code}" -lt 200 ] || [ "${http_code}" -ge 300 ]; then
+            echo "::error::Coolify API devolvió HTTP ${http_code}"
+            cat /tmp/coolify_response.json || true
+            exit 1
+          fi
+
+          echo "Deploy solicitado correctamente."
+          cat /tmp/coolify_response.json
