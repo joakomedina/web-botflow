@@ -66,7 +66,30 @@ const notIncluded = [
 export const metadata: Metadata = {
   title: "Soy tu aliado tecnológico",
   description:
-    "Servicio para autónomos y pequeños negocios que necesitan organizar su base digital y empezar a automatizar procesos sin complicarse."
+    "Servicio para autónomos y pequeños negocios que necesitan organizar su base digital y empezar a automatizar procesos sin complicarse.",
+  alternates: {
+    canonical: "/aliado-tecnologico"
+  },
+  openGraph: {
+    title: "Soy tu aliado tecnológico | botflow.top",
+    description:
+      "Servicio para autónomos y pequeños negocios que necesitan organizar su base digital y empezar a automatizar procesos sin complicarse.",
+    images: [
+      {
+        url: "/og-aliado-tecnologico.png",
+        width: 1200,
+        height: 630,
+        alt: "Soy tu aliado tecnológico - botflow.top"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Soy tu aliado tecnológico | botflow.top",
+    description:
+      "Servicio para autónomos y pequeños negocios que necesitan organizar su base digital y empezar a automatizar procesos sin complicarse.",
+    images: ["/og-aliado-tecnologico.png"]
+  }
 };
 
 export default function AliadoTecnologicoPage() {
@@ -215,4 +238,3 @@ export default function AliadoTecnologicoPage() {
     </>
   );
 }
-

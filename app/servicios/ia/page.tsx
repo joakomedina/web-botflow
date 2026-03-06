@@ -9,7 +9,10 @@ const service = getServiceBySlug("ia");
 export const metadata: Metadata = {
   title: "Implementaciones de inteligencia artificial para negocio",
   description:
-    "Asistentes y agentes IA integrados en procesos reales para mejorar atención, clasificación, contenido y eficiencia operativa."
+    "Asistentes y agentes IA integrados en procesos reales para mejorar atención, clasificación, contenido y eficiencia operativa.",
+  alternates: {
+    canonical: "/servicios/ia"
+  }
 };
 
 export default function IAPage() {
@@ -72,4 +75,3 @@ export default function IAPage() {
     </>
   );
 }
-

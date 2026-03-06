@@ -18,16 +18,26 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: seoKeywords,
-  alternates: {
-    canonical: "/"
-  },
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: siteConfig.siteUrl,
     siteName: siteConfig.brand,
     title: "Sistemas digitales para automatizar negocios | botflow.top",
-    description: siteConfig.description
+    description: siteConfig.description,
+    images: [
+      {
+        url: "/og-botflow.png",
+        width: 1200,
+        height: 630,
+        alt: "botflow.top - Sistemas digitales para automatizar negocios"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sistemas digitales para automatizar negocios | botflow.top",
+    description: siteConfig.description,
+    images: ["/og-botflow.png"]
   },
   robots: {
     index: true,

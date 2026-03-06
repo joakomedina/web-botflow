@@ -9,7 +9,10 @@ const service = getServiceBySlug("apps");
 export const metadata: Metadata = {
   title: "Desarrollo de aplicaciones y herramientas internas",
   description:
-    "Diseño de aplicaciones web y herramientas internas para centralizar operaciones, clientes y datos del negocio."
+    "Diseño de aplicaciones web y herramientas internas para centralizar operaciones, clientes y datos del negocio.",
+  alternates: {
+    canonical: "/servicios/apps"
+  }
 };
 
 export default function AppsPage() {
@@ -72,4 +75,3 @@ export default function AppsPage() {
     </>
   );
 }
-

@@ -8,7 +8,10 @@ import { completedProjects, inProgressProjects } from "@/data/projects";
 export const metadata: Metadata = {
   title: "Proyectos realizados y en desarrollo",
   description:
-    "Listado de proyectos de desarrollo web, automatización e IA implementados o en fase de construcción en botflow.top."
+    "Listado de proyectos de desarrollo web, automatización e IA implementados o en fase de construcción en botflow.top.",
+  alternates: {
+    canonical: "/proyectos"
+  }
 };
 
 export default function ProyectosPage() {
@@ -57,4 +60,3 @@ export default function ProyectosPage() {
     </>
   );
 }
-

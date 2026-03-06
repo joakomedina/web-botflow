@@ -27,12 +27,13 @@ export function ProblemSection() {
           ))}
         </div>
         <Reveal delay={0.24}>
-          <p className="mt-8 rounded-2xl border border-[color:var(--panel-border)] bg-[color:var(--color-dark)] px-6 py-5 text-lg font-medium text-white">
-            El problema no es la falta de herramientas. Es la falta de sistema.
-          </p>
+          <div className="mt-8 overflow-hidden rounded-2xl border border-indigo-200 bg-gradient-to-r from-indigo-50 to-cyan-50 px-6 py-5">
+            <p className="text-lg font-semibold text-[color:var(--color-dark)]">
+              El problema no es la falta de herramientas. Es la falta de sistema.
+            </p>
+          </div>
         </Reveal>
       </div>
     </section>
   );
 }
-

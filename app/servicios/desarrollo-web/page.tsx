@@ -9,7 +9,10 @@ const service = getServiceBySlug("desarrollo-web");
 export const metadata: Metadata = {
   title: "Servicio de desarrollo web profesional",
   description:
-    "Diseño y desarrollo de webs orientadas a negocio con estructura SEO, rendimiento optimizado y foco en conversión."
+    "Diseño y desarrollo de webs orientadas a negocio con estructura SEO, rendimiento optimizado y foco en conversión.",
+  alternates: {
+    canonical: "/servicios/desarrollo-web"
+  }
 };
 
 export default function DesarrolloWebPage() {
@@ -72,4 +75,3 @@ export default function DesarrolloWebPage() {
     </>
   );
 }
-

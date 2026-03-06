@@ -14,7 +14,10 @@ import { services } from "@/data/services";
 export const metadata: Metadata = {
   title: "Desarrollo web, automatización e IA para negocios",
   description:
-    "Construyo sistemas digitales que conectan web, aplicaciones, automatización e inteligencia artificial para reducir trabajo manual."
+    "Construyo sistemas digitales que conectan web, aplicaciones, automatización e inteligencia artificial para reducir trabajo manual.",
+  alternates: {
+    canonical: "/"
+  }
 };
 
 export default function HomePage() {

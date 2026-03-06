@@ -4,9 +4,9 @@ import { Reveal } from "./Reveal";
 import { SectionTitle } from "./SectionTitle";
 
 const strengths = [
-  "Perfil híbrido entre negocio, desarrollo y automatización.",
-  "Capacidad de unir estrategia y ejecución técnica sin fricción.",
-  "Enfoque en soluciones útiles, no en tecnología por moda."
+  "Visión humana y de negocio antes de definir tecnología.",
+  "Más de 7 años diseñando sistemas digitales y automatizaciones.",
+  "Acompañamiento práctico para profesionales, autónomos y pequeñas empresas."
 ];
 
 const aboutImageRatio = 1200 / 581;
@@ -19,15 +19,20 @@ export function AboutSection() {
           <Reveal>
             <SectionTitle
               eyebrow="Sobre mí"
-              title="Trabajo en la intersección entre desarrollo, automatización e inteligencia artificial."
-              description="Soy Joaquin Arvelo y diseño soluciones que no solo se ven bien: reducen trabajo operativo, ordenan procesos y amplían la capacidad del negocio."
+              title="Tecnología con propósito, enfocada en personas y resultados."
+              description="Soy Joaquin Arvelo. Mi enfoque combina psicología, negocio y tecnología para construir sistemas digitales que realmente simplifican el trabajo."
             />
             <p className="text-pretty text-base leading-relaxed text-[color:var(--color-muted)]">
-              Mi objetivo es construir sistemas digitales completos para negocios que ya no quieren
-              más herramientas sueltas, sino una infraestructura práctica para operar mejor.
+              Después de un proceso de reinvención profesional como migrante venezolano en España,
+              aprendí que crecer no es solo implementar herramientas: es construir una base digital
+              clara que acompañe el proceso real de cada negocio.
+            </p>
+            <p className="mt-4 text-pretty text-base leading-relaxed text-[color:var(--color-muted)]">
+              También aprendí algo esencial: crecer no se hace solo. Por eso ofrezco mis servicios,
+              para acompañarte en la construcción de sistemas que te ayuden a avanzar con claridad.
             </p>
             <Link href="/sobre-mi" className="btn-base btn-secondary mt-6 gap-2 px-5 py-3">
-              Conocer enfoque completo
+              Conocer mi enfoque
               <span aria-hidden>→</span>
             </Link>
           </Reveal>

@@ -1,5 +1,6 @@
-"use client";
+﻿"use client";
 
+import emailjs from "@emailjs/browser";
 import { useMemo, useState } from "react";
 import { siteConfig } from "@/lib/site";
 
@@ -20,9 +21,20 @@ const initialFields: ContactFields = {
 export function ContactForm() {
   const [fields, setFields] = useState<ContactFields>(initialFields);
   const [feedback, setFeedback] = useState<string>("");
+  const [isSendingEmail, setIsSendingEmail] = useState(false);
+
+  const emailJsConfig = {
+    serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+    templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+    publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+  };
 
   const canSend = useMemo(() => {
-    return fields.name.trim().length > 1 && fields.email.trim().length > 5 && fields.message.trim().length > 9;
+    return (
+      fields.name.trim().length > 1 &&
+      fields.email.trim().length > 5 &&
+      fields.message.trim().length > 9
+    );
   }, [fields]);
 
   function updateField(field: keyof ContactFields, value: string) {
@@ -53,6 +65,12 @@ export function ContactForm() {
     return true;
   }
 
+  function openMailClient() {
+    const subject = encodeURIComponent(`Consulta desde ${siteConfig.domain}`);
+    const body = encodeURIComponent(buildMessage());
+    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
+  }
+
   function sendByWhatsapp() {
     if (!validate()) {
       return;
@@ -62,14 +80,51 @@ export function ContactForm() {
     setFeedback("Se abrió WhatsApp con el mensaje listo para enviar.");
   }
 
-  function sendByEmail() {
+  async function sendByEmail() {
     if (!validate()) {
       return;
     }
-    const subject = encodeURIComponent(`Consulta desde ${siteConfig.domain}`);
-    const body = encodeURIComponent(buildMessage());
-    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
-    setFeedback("Se abrió tu cliente de correo con el mensaje preparado.");
+
+    const hasEmailJsConfig =
+      Boolean(emailJsConfig.serviceId) &&
+      Boolean(emailJsConfig.templateId) &&
+      Boolean(emailJsConfig.publicKey);
+
+    if (!hasEmailJsConfig) {
+      openMailClient();
+      setFeedback("Falta configuración de EmailJS en entorno. Se abrió tu cliente de correo.");
+      return;
+    }
+
+    try {
+      setIsSendingEmail(true);
+      await emailjs.send(
+        emailJsConfig.serviceId as string,
+        emailJsConfig.templateId as string,
+        {
+          from_name: fields.name,
+          from_email: fields.email,
+          company: fields.company || "No especificado",
+          message: fields.message,
+          to_email: siteConfig.email,
+          reply_to: fields.email,
+          website: siteConfig.domain
+        },
+        {
+          publicKey: emailJsConfig.publicKey as string
+        }
+      );
+
+      setFeedback("Mensaje enviado correctamente. Te responderé pronto.");
+      setFields(initialFields);
+    } catch {
+      openMailClient();
+      setFeedback(
+        "No se pudo enviar por EmailJS en este momento. Se abrió tu cliente de correo como alternativa."
+      );
+    } finally {
+      setIsSendingEmail(false);
+    }
   }
 
   return (
@@ -130,18 +185,16 @@ export function ContactForm() {
         />
       </label>
       <div className="flex flex-wrap gap-3">
-        <button
-          type="submit"
-          className="btn-base btn-primary px-5 py-3"
-        >
+        <button type="submit" className="btn-base btn-primary px-5 py-3">
           Enviar por WhatsApp
         </button>
         <button
           type="button"
-          onClick={sendByEmail}
-          className="btn-base btn-secondary px-5 py-3"
+          onClick={() => void sendByEmail()}
+          className="btn-base btn-secondary px-5 py-3 disabled:cursor-not-allowed disabled:opacity-75"
+          disabled={isSendingEmail}
         >
-          Enviar por Email
+          {isSendingEmail ? "Enviando..." : "Enviar por Email"}
         </button>
       </div>
       <p className="text-xs leading-relaxed text-[color:var(--color-muted)]">
@@ -150,7 +203,10 @@ export function ContactForm() {
           {siteConfig.email}
         </a>{" "}
         o por WhatsApp al{" "}
-        <a className="font-medium text-[color:var(--color-primary)]" href={`https://wa.me/${siteConfig.whatsappRaw}`}>
+        <a
+          className="font-medium text-[color:var(--color-primary)]"
+          href={`https://wa.me/${siteConfig.whatsappRaw}`}
+        >
           {siteConfig.whatsappDisplay}
         </a>
         .

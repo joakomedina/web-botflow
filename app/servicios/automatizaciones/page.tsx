@@ -9,7 +9,10 @@ const service = getServiceBySlug("automatizaciones");
 export const metadata: Metadata = {
   title: "Automatización de procesos e integraciones",
   description:
-    "Automatización de flujos e integraciones entre herramientas para reducir tareas repetitivas y errores operativos."
+    "Automatización de flujos e integraciones entre herramientas para reducir tareas repetitivas y errores operativos.",
+  alternates: {
+    canonical: "/servicios/automatizaciones"
+  }
 };
 
 export default function AutomatizacionesPage() {
@@ -72,4 +75,3 @@ export default function AutomatizacionesPage() {
     </>
   );
 }
-

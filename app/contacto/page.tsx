@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ContactForm } from "@/components/ContactForm";
 import { PageHero } from "@/components/PageHero";
@@ -6,9 +6,12 @@ import { Reveal } from "@/components/Reveal";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contacto | botflow.top",
+  title: "Contacto",
   description:
-    "Formulario de contacto y canales directos de WhatsApp y email para iniciar un proyecto de desarrollo, automatización o IA."
+    "Formulario de contacto y canales directos de WhatsApp y email para iniciar un proyecto de desarrollo, automatización o IA.",
+  alternates: {
+    canonical: "/contacto"
+  }
 };
 
 const contactCards = [
