@@ -1,0 +1,32 @@
+name: Deploy to Coolify
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-coolify-main
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Coolify deployment
+        env:
+          COOLIFY_API_URL: ${{ secrets.COOLIFY_API_URL }}
+          COOLIFY_API_TOKEN: ${{ secrets.COOLIFY_API_TOKEN }}
+          COOLIFY_APP_UUID: ${{ secrets.COOLIFY_APP_UUID }}
+        run: |
+          set -euo pipefail
+          : "${COOLIFY_API_URL:?Missing COOLIFY_API_URL}"
+          : "${COOLIFY_API_TOKEN:?Missing COOLIFY_API_TOKEN}"
+          : "${COOLIFY_APP_UUID:?Missing COOLIFY_APP_UUID}"
+
+          curl -fsS -G \
+            -H "Authorization: Bearer ${COOLIFY_API_TOKEN}" \
+            -H "Accept: application/json" \
+            --data-urlencode "uuid=${COOLIFY_APP_UUID}" \
+            "${COOLIFY_API_URL%/}/deploy"
