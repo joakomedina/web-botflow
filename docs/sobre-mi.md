@@ -18,4 +18,4 @@ También creo en el valor del bienestar social y en crear soluciones que ayuden 
 
 Por eso mi forma de trabajar no se basa solo en entregar tecnología, sino en **acompañar procesos y construir sistemas que tengan sentido para quienes los utilizan**.
 
-Esto me impulsó a crear el servicio "Tu aliado tecnológico, pensado para acompañar a profesionales, autonomos, pequeñas empresas, emprendedores que necesitan apoyo para construir su base digital.” 
+Esto me impulsó a crear el servicio "Tu aliado tecnológico, pensado para acompañar a profesionales, autonomos, pequeñas empresas, emprendedores que necesitan apoyo para construir su base digital” 
