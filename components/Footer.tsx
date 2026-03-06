@@ -41,6 +41,8 @@ export function Footer() {
               <li>
                 <a
                   href={`https://wa.me/${siteConfig.whatsappRaw}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="transition hover:text-[color:var(--color-primary)]"
                 >
                   WhatsApp: {siteConfig.whatsappDisplay}
@@ -66,4 +68,3 @@ export function Footer() {
     </footer>
   );
 }
-

@@ -35,6 +35,8 @@ export function Navbar() {
         <div className="hidden items-center gap-3 md:flex">
           <Link
             href={`https://wa.me/${siteConfig.whatsappRaw}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-base btn-primary px-5 py-2.5"
           >
             WhatsApp
@@ -89,6 +91,8 @@ export function Navbar() {
             ))}
             <Link
               href={`https://wa.me/${siteConfig.whatsappRaw}`}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}
               className="btn-base btn-primary px-4 py-3 text-center"
             >

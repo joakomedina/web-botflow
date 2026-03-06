@@ -70,6 +70,8 @@ export default function ContactoPage() {
                 </p>
                 <Link
                   href={`https://wa.me/${siteConfig.whatsappRaw}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-base btn-light mt-4 px-4 py-2"
                 >
                   Abrir WhatsApp

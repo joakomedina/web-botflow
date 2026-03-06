@@ -244,6 +244,8 @@ export function ContactForm({ contextLabel, defaultMessage = "" }: ContactFormPr
         <a
           className="font-medium text-[color:var(--color-primary)]"
           href={`https://wa.me/${siteConfig.whatsappRaw}`}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {siteConfig.whatsappDisplay}
         </a>

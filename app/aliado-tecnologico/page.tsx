@@ -132,6 +132,8 @@ export default function AliadoTecnologicoPage() {
                     </Link>
                     <Link
                       href={`https://wa.me/${siteConfig.whatsappRaw}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="btn-base btn-secondary px-6 py-3"
                     >
                       Solicitar información
@@ -290,6 +292,8 @@ export default function AliadoTecnologicoPage() {
                 </p>
                 <Link
                   href={`https://wa.me/${siteConfig.whatsappRaw}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-base btn-primary mt-4 px-4 py-2 text-sm"
                 >
                   Abrir WhatsApp
