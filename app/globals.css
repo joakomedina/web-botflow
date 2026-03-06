@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #1e3a8a;
+  --color-secondary: #6366f1;
+  --color-accent: #14b8a6;
+  --color-bg: #f9fafb;
+  --color-dark: #0f172a;
+  --color-text: #111827;
+  --color-muted: #6b7280;
+  --panel-border: #dbe3f3;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--color-text);
+  background:
+    radial-gradient(120% 120% at 12% -10%, rgb(30 58 138 / 0.12), transparent 48%),
+    radial-gradient(80% 80% at 88% 0%, rgb(20 184 166 / 0.15), transparent 42%),
+    var(--color-bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  color: #ffffff;
+  background-color: rgb(30 58 138 / 0.8);
+}
+
+.container-shell {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.panel-card {
+  border: 1px solid var(--panel-border);
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow:
+    0 20px 45px -32px rgb(15 23 42 / 0.5),
+    0 8px 20px -16px rgb(30 58 138 / 0.35);
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgb(15 23 42 / 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(15 23 42 / 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    filter 180ms ease;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-light,
+.btn-service {
+  border: 1px solid rgb(30 58 138 / 0.95);
+  background-image: linear-gradient(135deg, #081539 0%, #0b1f52 60%, #102a68 100%);
+  color: #ffffff;
+  box-shadow: 0 10px 22px -14px rgb(30 58 138 / 0.7);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-light:hover,
+.btn-service:hover {
+  border-color: rgb(20 84 204 / 0.98);
+  background-image: linear-gradient(135deg, #0a1a46 0%, #10306f 62%, #1a3f89 100%);
+  color: #ffffff;
+  filter: brightness(1.03);
+}
+
+.nav-pill {
+  transition:
+    background-image 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    filter 180ms ease;
+}
+
+.nav-pill:hover,
+.nav-pill-active {
+  border-color: rgb(30 58 138 / 0.95);
+  background-image: linear-gradient(135deg, #081539 0%, #0b1f52 60%, #102a68 100%);
+  color: #ffffff !important;
+  box-shadow: 0 8px 18px -14px rgb(30 58 138 / 0.7);
+}
+
+.nav-pill:hover {
+  filter: brightness(1.03);
+}

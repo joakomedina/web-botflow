@@ -1,0 +1,20 @@
+DESIGN SYSTEM
+
+Typography Font: Inter
+
+Headings: Inter SemiBold / Bold Body: Inter Regular UI Elements: Inter
+Medium
+
+Color Palette
+
+Primary #1E3A8A Secondary #6366F1 Accent #14B8A6 Background #F9FAFB Dark
+#0F172A Text #111827 Muted #6B7280
+
+UI Components
+
+Primary Button background: primary text: white padding: px-6 py-3 border
+radius: rounded-xl
+
+Cards background: white shadow: soft padding: 24px border radius: 16px
+
+Container max-width: 1200px margin: auto padding: 24px

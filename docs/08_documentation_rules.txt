@@ -1,0 +1,109 @@
+DOCUMENTATION GUIDELINES
+
+Purpose Ensure that all generated code includes clear, simple
+documentation so the project can be maintained, updated, and supported
+easily in the future.
+
+General Principle Documentation must be written for a developer who did
+not build the system. It should allow understanding the structure and
+modifying the project quickly.
+
+  ---------------
+  GENERAL RULES
+  ---------------
+
+Always document:
+
+-   folder structure
+-   main components
+-   data structures
+-   external integrations
+-   configuration variables
+-   deployment steps
+
+Documentation must be:
+
+-   concise
+-   clear
+-   written in plain language
+-   easy to scan
+
+Avoid long theoretical explanations.
+
+Prefer short sections with headings and bullet points.
+
+  ----------------------------
+  REQUIRED PROJECT DOCUMENTS
+  ----------------------------
+
+README.md
+
+The project must include a README file explaining:
+
+Project purpose Tech stack How to install How to run locally How to
+deploy Main folders explanation
+
+ARCHITECTURE.md
+
+Explain:
+
+high level system structure main components how pages are composed how
+data flows through the application
+
+COMPONENTS.md
+
+List all major components with:
+
+component name purpose props example usage
+
+SERVICES.md
+
+Explain external integrations:
+
+APIs used automation services AI integrations data sources
+
+CHANGELOG.md
+
+Track important updates to the project.
+
+Include:
+
+date change description files affected
+
+  ---------------
+  CODE COMMENTS
+  ---------------
+
+Important logic must include comments explaining:
+
+why the code exists what problem it solves how it works
+
+Example:
+
+// Fetches service data used in the ServicesGrid component // This data
+drives the homepage services section
+
+  ----------------------------
+  FOLDER LEVEL DOCUMENTATION
+  ----------------------------
+
+Important folders should include short README files.
+
+Example:
+
+/components/README.md
+
+Explains: purpose of the components folder component patterns how
+components should be created
+
+  -----------------------
+  GOAL OF DOCUMENTATION
+  -----------------------
+
+Documentation must allow:
+
+easy onboarding of new developers quick debugging safe feature changes
+long term maintenance
+
+The documentation should make the system understandable in less than 30
+minutes.

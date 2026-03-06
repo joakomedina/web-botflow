@@ -1,0 +1,19 @@
+CODING RULES
+
+Use TypeScript everywhere.
+
+Prefer functional React components.
+
+Use Tailwind CSS for styling.
+
+Avoid inline styles.
+
+Keep components small and reusable.
+
+Use server components when possible.
+
+Use client components only when necessary.
+
+Follow clean folder structure.
+
+Optimize for performance and SEO.

@@ -1,0 +1,42 @@
+{
+  "name": "web-joaquin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio profesional de Joaquin Arvelo para botflow.top",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --max-warnings=0"
+  },
+  "keywords": [
+    "nextjs",
+    "automatizacion",
+    "ia",
+    "desarrollo-web",
+    "botflow"
+  ],
+  "author": "Joaquin Arvelo",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
+    "@types/node": "^25.3.5",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^9.39.3",
+    "eslint-config-next": "^16.1.6",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "framer-motion": "^12.35.0",
+    "next": "^16.1.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

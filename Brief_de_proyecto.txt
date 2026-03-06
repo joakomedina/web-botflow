@@ -1,0 +1,408 @@
+# Brief de inicio de proyecto
+
+## Objetivo
+
+Crear una web profesional en **Next.js** para ofrecer servicios de:
+
+* desarrollo web
+* desarrollo de apps
+* automatizaciones
+* implementaciones de IA
+
+La web debe reutilizar la lógica estructural de la actual **arquitectura landing**, adaptándola a una marca personal/servicio tecnológico orientado a negocio.
+
+## Propuesta de valor principal
+
+**Construyo sistemas digitales que automatizan tu negocio.**
+Webs, aplicaciones y agentes de inteligencia artificial que eliminan tareas manuales y conectan tus herramientas.
+
+## Posicionamiento
+
+Esta web no debe parecer una "agencia web genérica".
+Debe posicionar al profesional como alguien que:
+
+* entiende procesos de negocio
+* diseña soluciones completas
+* conecta web + automatización + datos + IA
+* implementa tecnología con impacto real
+
+Idea central de marca:
+**No solo hago webs. Diseño sistemas digitales que trabajan para el negocio.**
+
+---
+
+# Referencia estructural
+
+Usar como referencia la estructura de la **landing de arquitectura** ya existente.
+No copiar contenido ni estética exacta, pero sí la lógica de composición, claridad, ritmo visual y jerarquía.
+
+Tomar de la landing de arquitectura:
+
+* hero fuerte y visual
+* secciones limpias
+* bloques de servicios
+* bloque de proyectos/casos
+* sección sobre mí / enfoque
+* CTA final claro
+* estética sobria, profesional y premium
+
+Adaptar todo al sector tecnológico.
+
+---
+
+# Objetivo de negocio de la web
+
+La web debe servir para:
+
+1. transmitir credibilidad
+2. explicar claramente qué problema resuelvo
+3. mostrar servicios concretos
+4. captar leads de clientes
+5. abrir conversaciones de proyecto
+
+La web no debe ser excesivamente compleja en la primera versión.
+Debe salir como una **V1 estratégica**, clara, elegante y escalable.
+
+---
+
+# Perfil de cliente ideal
+
+Negocios, profesionales o pequeñas empresas que:
+
+* tienen procesos manuales
+* usan muchas herramientas desconectadas
+* pierden tiempo en tareas repetitivas
+* quieren mejorar su presencia digital
+* quieren automatizar operaciones
+* quieren implementar IA de forma útil, no decorativa
+
+Ejemplos:
+
+* clínicas
+* estudios profesionales
+* inmobiliarias
+* arquitectura/interiorismo
+* negocios de servicios
+* pequeñas operaciones comerciales
+
+---
+
+# Mensaje clave de la homepage
+
+La homepage debe comunicar rápidamente:
+
+1. qué hago
+2. para quién lo hago
+3. qué resultados genero
+4. cómo trabajo
+5. cómo contactar
+
+---
+
+# Arquitectura de la web
+
+## Página principal (home)
+
+La home debe incluir estas secciones:
+
+### 1. Hero
+
+Objetivo: comunicar la propuesta de valor en 3 segundos.
+
+Elementos:
+
+* headline principal
+* subheadline
+* 1 CTA principal
+* 1 CTA secundario
+* apoyo visual tecnológico/sistema/interfaz
+
+Texto base sugerido:
+
+* Título: **Construyo sistemas digitales que automatizan tu negocio**
+* Subtítulo: Webs, aplicaciones y agentes de inteligencia artificial que eliminan tareas manuales, conectan tus herramientas y ayudan a escalar sin aumentar complejidad.
+* CTA principal: **Hablemos de tu proyecto**
+* CTA secundario: **Ver servicios**
+
+### 2. Bloque de problema
+
+Objetivo: conectar con dolores reales.
+
+Mensajes posibles:
+
+* demasiadas tareas manuales
+* herramientas que no se hablan entre sí
+* procesos lentos
+* pérdida de tiempo operativo
+* tecnología aislada que no resuelve el negocio
+
+Cierre del bloque:
+**El problema no es la falta de herramientas. Es la falta de sistema.**
+
+### 3. Bloque de solución
+
+Objetivo: explicar el enfoque.
+
+Mensaje:
+Diseño sistemas digitales completos que combinan web, automatización, integraciones e IA para convertir procesos dispersos en operaciones más simples y escalables.
+
+### 4. Servicios
+
+Mostrar 4 bloques principales:
+
+#### Desarrollo web
+
+* landing pages
+* webs corporativas
+* webs de servicios
+* páginas orientadas a conversión
+
+#### Aplicaciones
+
+* paneles internos
+* portales de cliente
+* herramientas a medida
+* interfaces para procesos específicos
+
+#### Automatizaciones
+
+* integraciones entre herramientas
+* flujos automáticos
+* captación y procesamiento de datos
+* bots y procesos internos
+
+#### Implementaciones de IA
+
+* asistentes inteligentes
+* clasificación y generación de contenido
+* agentes conectados a procesos
+* IA aplicada a operaciones reales
+
+Cada servicio debe tener:
+
+* título
+* descripción breve
+* lista corta de capacidades
+* llamada a la acción
+
+### 5. Casos / Proyectos
+
+Objetivo: mostrar credibilidad.
+
+Aunque inicialmente no haya muchos casos públicos, dejar la estructura preparada.
+Formato recomendado:
+
+* tarjetas limpias
+* nombre del proyecto
+* tipo de solución
+* problema resuelto
+* stack o enfoque
+* resultado esperado/logrado
+
+Posibles categorías:
+
+* web de servicios
+* automatización operativa
+* integración con IA
+* sistema interno
+
+### 6. Proceso de trabajo
+
+Propuesta de 4 pasos:
+
+1. Diagnóstico
+2. Diseño de solución
+3. Implementación
+4. Optimización
+
+Este bloque debe reforzar que no se vende tecnología aislada, sino un sistema pensado desde el problema.
+
+### 7. Sobre mí / enfoque
+
+Objetivo: humanizar y diferenciar.
+
+Enfoque narrativo:
+
+* perfil híbrido entre negocio, datos, automatización y desarrollo
+* capacidad de conectar estrategia con implementación real
+* orientación a soluciones útiles, no solo visuales
+
+Mensaje sugerido:
+Trabajo en la intersección entre desarrollo, automatización e inteligencia artificial para construir soluciones que no solo se ven bien, sino que realmente reducen trabajo y crean capacidad operativa.
+
+### 8. CTA final
+
+Cerrar con una invitación clara.
+
+Ejemplo:
+**Si tu negocio ya no necesita más herramientas, sino un sistema que funcione, hablemos.**
+
+Botón:
+**Solicitar una reunión**
+
+---
+
+# Estilo visual esperado
+
+La web debe mantener una estética:
+
+* sobria
+* tecnológica
+* limpia
+* moderna
+* premium
+* con sensación de sistema y precisión
+
+Evitar:
+
+* estética genérica de SaaS muy fría
+* colores chillones
+* exceso de elementos decorativos
+* bloques saturados
+
+Inspiración visual:
+
+* fondos limpios
+* buen uso del espacio en blanco
+* tipografía fuerte
+* animaciones sutiles
+* tarjetas elegantes
+* grids ordenados
+* sensación de producto/infraestructura digital
+
+---
+
+# Requisitos técnicos
+
+## Stack
+
+* Next.js (App Router)
+* TypeScript
+* Tailwind CSS
+* Framer Motion
+* componentes reutilizables
+* estructura preparada para crecer
+
+## Buenas prácticas
+
+* código limpio y modular
+* componentes desacoplados
+* responsive real
+* performance cuidada
+* SEO base correcto
+* accesibilidad razonable
+
+## Estructura recomendada
+
+* app/
+* components/
+* data/
+* public/
+* lib/
+
+## Componentes posibles
+
+* Navbar
+* Hero
+* ProblemSection
+* SolutionSection
+* ServicesGrid
+* ProjectsPreview
+* ProcessSection
+* AboutSection
+* CTASection
+* Footer
+
+---
+
+# SEO base
+
+Preparar desde el inicio:
+
+* title y description de homepage
+* estructura semántica correcta
+* headings bien jerarquizados
+* textos orientados a intención comercial
+* base preparada para futuras páginas de servicio
+
+Título orientativo:
+**Desarrollo web, automatización e IA para negocios | [Nombre de marca]**
+
+Meta description orientativa:
+**Diseño sistemas digitales que combinan web, aplicaciones, automatización e inteligencia artificial para ayudar a negocios a reducir tareas manuales y escalar mejor.**
+
+---
+
+# Futuras páginas a contemplar
+
+Aunque inicialmente se desarrolle la home, dejar lista la escalabilidad para crear después:
+
+* /servicios/desarrollo-web
+* /servicios/apps
+* /servicios/automatizaciones
+* /servicios/ia
+* /proyectos
+* /contacto
+* /sobre-mi
+
+---
+
+# Tono de comunicación
+
+El copy debe sonar:
+
+* claro
+* profesional
+* directo
+* estratégico
+* nada grandilocuente
+* sin promesas vacías
+
+Debe evitarse el lenguaje de humo tipo:
+
+* innovación disruptiva
+* soluciones 360 sin explicar nada
+* transformación digital vacía
+
+La comunicación debe transmitir:
+**criterio técnico + visión de negocio + capacidad de ejecución**
+
+---
+
+# Instrucción para desarrollo
+
+Quiero que desarrolles una **primera versión funcional y visualmente sólida** de esta web en Next.js, reutilizando la lógica estructural de la landing de arquitectura como referencia.
+
+Prioridades:
+
+1. claridad de mensaje
+2. diseño premium y limpio
+3. buena jerarquía visual
+4. componentes reutilizables
+5. base escalable para nuevas páginas
+
+No busco una plantilla genérica.
+Busco una web que comunique una posición clara:
+**construyo sistemas digitales que automatizan negocios.**
+
+---
+
+# Entregable esperado
+
+Generar:
+
+* estructura inicial del proyecto en Next.js
+* componentes base de la home
+* estilos con Tailwind
+* contenido inicial integrado
+* navegación funcional
+* secciones listas para iteración
+* base SEO mínima
+
+---
+
+# Resumen ejecutivo para no perder el foco
+
+Esta web debe vender una idea muy concreta:
+
+**No desarrollo piezas sueltas. Diseño e implemento sistemas digitales completos para negocios que quieren reducir trabajo manual, conectar herramientas y aplicar IA con sentido.**

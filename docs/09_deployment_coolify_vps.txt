@@ -1,0 +1,53 @@
+DEPLOYMENT: VPS + COOLIFY
+
+Objective This project will be deployed on a self-hosted VPS using
+Coolify. It must follow a standard Next.js production build compatible
+with Coolify.
+
+Infrastructure Hosting: Self-hosted VPS Deployment manager: Coolify
+Framework: Next.js Runtime: Node.js Reverse proxy and SSL handled by
+Coolify
+
+Deployment Goal The project must be deployable with minimal
+configuration inside Coolify.
+
+Build Process
+
+Install dependencies: npm install
+
+Build application: npm run build
+
+Start production server: npm run start
+
+Environment Variables
+
+Use environment variables for any configurable values.
+
+Examples:
+
+NEXT_PUBLIC_SITE_URL NEXT_PUBLIC_CONTACT_EMAIL
+
+Routing
+
+The application must work correctly with the Next.js App Router when
+running behind the Coolify reverse proxy.
+
+Images
+
+Use configuration compatible with self-hosted deployments. Avoid
+platform-specific optimizations tied only to Vercel.
+
+Documentation Requirement
+
+README.md must include:
+
+-   installation steps
+-   build command
+-   start command
+-   environment variables
+-   notes about deploying with Coolify
+
+Important
+
+Do not assume Vercel-specific deployment patterns. The target
+environment is a VPS managed by Coolify.

@@ -1,0 +1,11 @@
+COMPONENT SPECIFICATION
+
+Hero props: title subtitle primaryCTA secondaryCTA
+
+ServicesGrid props: services[]
+
+ServiceCard props: title description icon link
+
+ProjectCard props: title description image tags
+
+CTASection props: title description buttonText buttonLink

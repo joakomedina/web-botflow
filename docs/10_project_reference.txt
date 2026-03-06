@@ -1,0 +1,32 @@
+PROJECT REFERENCE
+
+This project should follow the technical logic used in the Architecture
+Landing project.
+
+Purpose
+
+Reuse the proven technical approach used in that project, while creating
+a completely new design and content.
+
+Replicate From Reference Project
+
+-   general project organization
+-   deployment logic compatible with Coolify
+-   production build approach
+-   environment variable handling
+-   simple scalable architecture
+
+Do NOT copy
+
+-   branding
+-   visual identity
+-   text content
+-   images
+
+Use the reference only as a technical blueprint.
+
+Goal
+
+Maintain a consistent development and deployment workflow across
+multiple projects so they are easier to maintain and deploy in the same
+infrastructure environment.

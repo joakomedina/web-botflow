@@ -1,0 +1,32 @@
+AI DEVELOPMENT INSTRUCTIONS
+
+Goal Guide AI tools (Codex, GPT, Cursor, Copilot) when generating code
+for this project.
+
+General Rules - Follow the project structure defined in the docs
+folder. - Use the defined design system (colors, typography, spacing). -
+Use Inter as the primary font. - Build reusable React components. - Use
+Tailwind CSS for styling. - Prefer clean, readable code. - Avoid
+unnecessary dependencies. - Keep components modular and maintainable.
+
+Technology Stack - Next.js (App Router) - TypeScript - Tailwind CSS -
+Framer Motion (for subtle animations)
+
+Coding Approach - Prefer server components when possible. - Use client
+components only when necessary. - Separate UI components from data
+structures. - Store data in the /data folder when appropriate.
+
+Deployment Awareness Do NOT assume the project will be deployed on
+Vercel.
+
+The deployment target is: Self-hosted VPS managed with Coolify.
+
+Therefore: - Avoid Vercel‑specific features. - Use a standard
+production-ready Next.js configuration. - Ensure the app can run with
+standard Node build and start commands.
+
+Project Goal The website must communicate clearly:
+
+‘I build digital systems that automate business processes.’
+
+Focus on: clarity performance maintainability clean design

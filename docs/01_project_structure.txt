@@ -1,0 +1,23 @@
+PROJECT STRUCTURE
+
+Next.js (App Router) project structure.
+
+/app layout.tsx page.tsx globals.css
+
+/servicios page.tsx
+
+/proyectos page.tsx
+
+/contacto page.tsx
+
+/components Navbar.tsx Hero.tsx ProblemSection.tsx SolutionSection.tsx
+ServicesGrid.tsx ProjectsPreview.tsx ProcessSection.tsx AboutSection.tsx
+CTASection.tsx Footer.tsx
+
+/data services.ts projects.ts
+
+/lib utils.ts
+
+/public images
+
+Goal: Create reusable components and keep a clean scalable architecture.

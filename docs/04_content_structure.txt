@@ -1,0 +1,22 @@
+CONTENT STRUCTURE
+
+Hero
+
+Title: Construyo sistemas digitales que automatizan tu negocio
+
+Subtitle: Webs, aplicaciones y agentes de inteligencia artificial que
+eliminan tareas manuales y conectan tus herramientas.
+
+CTA: Hablemos de tu proyecto
+
+Services
+
+Desarrollo Web Creación de webs profesionales orientadas a negocio.
+
+Aplicaciones Desarrollo de aplicaciones web y herramientas internas.
+
+Automatizaciones Integración de herramientas y automatización de
+procesos.
+
+Implementaciones de IA Uso de inteligencia artificial para mejorar
+procesos y decisiones.
