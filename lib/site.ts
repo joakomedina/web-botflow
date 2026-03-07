@@ -30,6 +30,7 @@ export const navigationLinks = [
   { label: "Inicio", href: "/" },
   { label: "Servicios", href: "/servicios" },
   { label: "Proyectos", href: "/proyectos" },
+  { label: "Blog", href: "/blog" },
   { label: "Sobre mí", href: "/sobre-mi" },
   { label: "Contacto", href: "/contacto" }
 ];

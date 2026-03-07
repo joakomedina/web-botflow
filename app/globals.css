@@ -124,3 +124,88 @@ a {
 .nav-pill:hover {
   filter: brightness(1.03);
 }
+
+.blog-content {
+  color: var(--color-dark);
+}
+
+.blog-content h2,
+.blog-content h3,
+.blog-content h4 {
+  margin-top: 2rem;
+  margin-bottom: 0.9rem;
+  line-height: 1.25;
+  font-weight: 650;
+  color: var(--color-dark);
+}
+
+.blog-content h2 {
+  font-size: 1.7rem;
+}
+
+.blog-content h3 {
+  font-size: 1.4rem;
+}
+
+.blog-content p,
+.blog-content li {
+  margin: 0.85rem 0;
+  font-size: 1.04rem;
+  line-height: 1.75;
+  color: var(--color-text);
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin: 0.8rem 0;
+  padding-left: 1.6rem;
+  list-style-position: outside;
+}
+
+.blog-content ul {
+  list-style: disc;
+}
+
+.blog-content ol {
+  list-style: decimal;
+}
+
+.blog-content ul li,
+.blog-content ol li {
+  display: list-item;
+}
+
+.blog-content li::marker {
+  color: var(--color-primary);
+}
+
+.blog-content a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.blog-content blockquote {
+  margin: 1.2rem 0;
+  border-left: 4px solid rgb(30 58 138 / 0.45);
+  padding: 0.15rem 0 0.15rem 1rem;
+  color: var(--color-muted);
+}
+
+.blog-content pre {
+  overflow-x: auto;
+  border: 1px solid var(--panel-border);
+  border-radius: 0.9rem;
+  background: #081539;
+  padding: 0.9rem 1rem;
+  color: #e4ecff;
+}
+
+.blog-content code {
+  border-radius: 0.4rem;
+  background: rgb(15 23 42 / 0.08);
+  padding: 0.1rem 0.3rem;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-size: 0.93em;
+}
