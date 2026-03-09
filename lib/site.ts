@@ -34,3 +34,12 @@ export const navigationLinks = [
   { label: "Sobre mí", href: "/sobre-mi" },
   { label: "Contacto", href: "/contacto" }
 ];
+
+export const navigationLinksEn = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/servicios" },
+  { label: "Projects", href: "/proyectos" },
+  { label: "Blog", href: "/blog" },
+  { label: "About", href: "/sobre-mi" },
+  { label: "Contact", href: "/contacto" }
+];

@@ -3,7 +3,20 @@ import Link from "next/link";
 import { Reveal } from "./Reveal";
 import { SectionTitle } from "./SectionTitle";
 
-const strengths = [
+type AboutSectionProps = {
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  paragraph1?: string;
+  paragraph2?: string;
+  buttonLabel?: string;
+  buttonHref?: string;
+  strengthsTitle?: string;
+  strengths?: string[];
+  imageAlt?: string;
+};
+
+const defaultStrengths = [
   "Visión humana y de negocio antes de definir tecnología.",
   "Más de 7 años diseñando sistemas digitales y automatizaciones.",
   "Acompañamiento práctico para profesionales, autónomos y pequeñas empresas."
@@ -11,28 +24,36 @@ const strengths = [
 
 const aboutImageRatio = 1200 / 581;
 
-export function AboutSection() {
+export function AboutSection({
+  eyebrow = "Sobre mí",
+  title = "Tecnología con propósito, enfocada en personas y resultados.",
+  description = "Soy Joaquin Arvelo. Mi enfoque combina psicología, negocio y tecnología para construir sistemas digitales que realmente simplifican el trabajo.",
+  paragraph1 = "Después de un proceso de reinvención profesional como migrante venezolano en España, aprendí que crecer no es solo implementar herramientas: es construir una base digital clara que acompañe el proceso real de cada negocio.",
+  paragraph2 = "También aprendí algo esencial: crecer no se hace solo. Por eso ofrezco mis servicios, para acompañarte en la construcción de sistemas que te ayuden a avanzar con claridad.",
+  buttonLabel = "Conocer mi enfoque",
+  buttonHref = "/sobre-mi",
+  strengthsTitle = "Diferenciales",
+  strengths = defaultStrengths,
+  imageAlt = "Joaquin Arvelo"
+}: AboutSectionProps) {
   return (
     <section className="py-18">
       <div className="container-shell">
         <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
           <Reveal>
             <SectionTitle
-              eyebrow="Sobre mí"
-              title="Tecnología con propósito, enfocada en personas y resultados."
-              description="Soy Joaquin Arvelo. Mi enfoque combina psicología, negocio y tecnología para construir sistemas digitales que realmente simplifican el trabajo."
+              eyebrow={eyebrow}
+              title={title}
+              description={description}
             />
             <p className="text-pretty text-base leading-relaxed text-[color:var(--color-muted)]">
-              Después de un proceso de reinvención profesional como migrante venezolano en España,
-              aprendí que crecer no es solo implementar herramientas: es construir una base digital
-              clara que acompañe el proceso real de cada negocio.
+              {paragraph1}
             </p>
             <p className="mt-4 text-pretty text-base leading-relaxed text-[color:var(--color-muted)]">
-              También aprendí algo esencial: crecer no se hace solo. Por eso ofrezco mis servicios,
-              para acompañarte en la construcción de sistemas que te ayuden a avanzar con claridad.
+              {paragraph2}
             </p>
-            <Link href="/sobre-mi" className="btn-base btn-secondary mt-6 gap-2 px-5 py-3">
-              Conocer mi enfoque
+            <Link href={buttonHref} className="btn-base btn-secondary mt-6 gap-2 px-5 py-3">
+              {buttonLabel}
               <span aria-hidden>→</span>
             </Link>
           </Reveal>
@@ -44,13 +65,13 @@ export function AboutSection() {
               >
                 <Image
                   src="/images/about/joaquin-arvelo.jpg"
-                  alt="Joaquin Arvelo"
+                  alt={imageAlt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 38vw"
                   className="object-contain object-center p-1"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-[color:var(--color-dark)]">Diferenciales</h3>
+              <h3 className="text-xl font-semibold text-[color:var(--color-dark)]">{strengthsTitle}</h3>
               <ul className="mt-5 space-y-4">
                 {strengths.map((strength) => (
                   <li

@@ -56,7 +56,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
         <div className="relative h-[96px] w-full md:h-[110px]">
           <Image
             src={service.image}
-            alt={`Servicio de ${service.title}`}
+            alt={service.title}
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
