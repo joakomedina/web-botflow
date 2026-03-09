@@ -1,7 +1,20 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { Reveal } from "./Reveal";
 
-const includedItems = [
+type AliadoTecnologicoCardProps = {
+  badge?: string;
+  title?: string;
+  intro?: string;
+  body?: string;
+  recommendedLabel?: string;
+  price?: string;
+  includesTitle?: string;
+  includedItems?: string[];
+  buttonLabel?: string;
+  buttonHref?: string;
+};
+
+const defaultIncludedItems = [
   "Web profesional para tu negocio",
   "Sistema para captar clientes",
   "Primera automatización de procesos",
@@ -28,36 +41,44 @@ function CheckIcon() {
   );
 }
 
-export function AliadoTecnologicoCard() {
+export function AliadoTecnologicoCard({
+  badge = "¿No sabes por dónde empezar?",
+  title = "Tu aliado tecnológico para empezar a digitalizar tu negocio",
+  intro = "Muchos profesionales saben que necesitan mejorar su presencia digital, pero no saben por dónde empezar ni qué herramientas usar.",
+  body = "Si eres autónomo o estás empezando tu negocio, te ayudo a construir la base digital que necesitas para empezar a trabajar con sistemas y automatizar tareas sin complicarte con la tecnología.",
+  recommendedLabel = "Servicio de inicio recomendado",
+  price = "Desde 1200 €",
+  includesTitle = "Incluye",
+  includedItems = defaultIncludedItems,
+  buttonLabel = "Ver cómo puedo ayudarte →",
+  buttonHref = "/aliado-tecnologico"
+}: AliadoTecnologicoCardProps) {
   return (
     <section className="py-16">
       <div className="container-shell">
         <Reveal>
           <article className="overflow-hidden rounded-3xl border border-indigo-200 bg-gradient-to-br from-indigo-50 to-blue-50 p-7 shadow-sm md:p-10">
             <p className="inline-flex rounded-full border border-indigo-200 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-indigo-700">
-              ¿No sabes por dónde empezar?
+              {badge}
             </p>
             <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight text-[color:var(--color-dark)] md:text-4xl">
-              Tu aliado tecnológico para empezar a digitalizar tu negocio
+              {title}
             </h2>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-[color:var(--color-muted)]">
-              Muchos profesionales saben que necesitan mejorar su presencia digital, pero no saben
-              por dónde empezar ni qué herramientas usar.
+              {intro}
             </p>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-[color:var(--color-muted)]">
-              Si eres autónomo o estás empezando tu negocio, te ayudo a construir la base digital
-              que necesitas para empezar a trabajar con sistemas y automatizar tareas sin
-              complicarte con la tecnología.
+              {body}
             </p>
             <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-indigo-700">
-              Servicio de inicio recomendado
+              {recommendedLabel}
             </p>
             <p className="mt-2 inline-flex rounded-full border border-indigo-300 bg-white/90 px-4 py-1.5 text-sm font-semibold text-indigo-800">
-              Desde 1200 €
+              {price}
             </p>
             <div className="mt-6 rounded-2xl border border-indigo-200/70 bg-white/85 p-5">
               <p className="text-sm font-semibold uppercase tracking-[0.12em] text-indigo-700">
-                Incluye
+                {includesTitle}
               </p>
               <ul className="mt-3 grid gap-2 text-sm text-[color:var(--color-dark)] md:grid-cols-2">
                 {includedItems.map((item) => (
@@ -68,8 +89,8 @@ export function AliadoTecnologicoCard() {
                 ))}
               </ul>
             </div>
-            <Link href="/aliado-tecnologico" className="btn-base btn-primary mt-7 w-fit gap-2 px-6 py-3">
-              Ver cómo puedo ayudarte →
+            <Link href={buttonHref} className="btn-base btn-primary mt-7 w-fit gap-2 px-6 py-3">
+              {buttonLabel}
             </Link>
           </article>
         </Reveal>

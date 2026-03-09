@@ -18,15 +18,23 @@ export type BlogPost = BlogPostSummary & {
   htmlContent: string;
 };
 
-const BLOG_DIRECTORY = path.join(process.cwd(), "content", "blog");
+type BlogLocale = "es" | "en";
 
-function listMarkdownFiles(): string[] {
-  if (!fs.existsSync(BLOG_DIRECTORY)) {
+function getBlogDirectory(locale: BlogLocale): string {
+  return locale === "en"
+    ? path.join(process.cwd(), "content", "blog", "en")
+    : path.join(process.cwd(), "content", "blog");
+}
+
+function listMarkdownFiles(locale: BlogLocale): string[] {
+  const blogDirectory = getBlogDirectory(locale);
+
+  if (!fs.existsSync(blogDirectory)) {
     return [];
   }
 
   return fs
-    .readdirSync(BLOG_DIRECTORY)
+    .readdirSync(blogDirectory)
     .filter(
       (fileName) =>
         fileName.endsWith(".md") &&
@@ -94,9 +102,9 @@ function calculateReadingMinutes(rawContent: string): number {
   return Math.max(1, Math.ceil(words / 220));
 }
 
-function parsePost(fileName: string): BlogPost {
+function parsePost(fileName: string, locale: BlogLocale): BlogPost {
   const slug = fileName.replace(/\.md$/, "");
-  const fullPath = path.join(BLOG_DIRECTORY, fileName);
+  const fullPath = path.join(getBlogDirectory(locale), fileName);
   const fileContent = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContent);
 
@@ -122,9 +130,9 @@ function parsePost(fileName: string): BlogPost {
   };
 }
 
-export function getAllPosts(): BlogPostSummary[] {
-  return listMarkdownFiles()
-    .map((fileName) => parsePost(fileName))
+export function getAllPosts(locale: BlogLocale = "es"): BlogPostSummary[] {
+  return listMarkdownFiles(locale)
+    .map((fileName) => parsePost(fileName, locale))
     .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
     .map((post) => ({
       slug: post.slug,
@@ -137,14 +145,14 @@ export function getAllPosts(): BlogPostSummary[] {
     }));
 }
 
-export function getPostBySlug(slug: string): BlogPost | null {
+export function getPostBySlug(slug: string, locale: BlogLocale = "es"): BlogPost | null {
   const safeSlug = slug.replace(/[^a-zA-Z0-9-_]/g, "");
   const fileName = `${safeSlug}.md`;
-  const filePath = path.join(BLOG_DIRECTORY, fileName);
+  const filePath = path.join(getBlogDirectory(locale), fileName);
 
   if (!fs.existsSync(filePath)) {
     return null;
   }
 
-  return parsePost(fileName);
+  return parsePost(fileName, locale);
 }

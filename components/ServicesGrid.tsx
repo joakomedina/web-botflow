@@ -5,19 +5,21 @@ import { ServiceCard } from "./ServiceCard";
 
 type ServicesGridProps = {
   services: Service[];
+  eyebrow?: string;
   title?: string;
   description?: string;
 };
 
 export function ServicesGrid({
   services,
+  eyebrow = "Servicios",
   title = "Servicios",
   description = "Servicios diseñados para construir soluciones útiles, medibles y escalables."
 }: ServicesGridProps) {
   return (
     <section className="py-18">
       <div className="container-shell">
-        <SectionTitle eyebrow="Servicios" title={title} description={description} />
+        <SectionTitle eyebrow={eyebrow} title={title} description={description} />
         <div className="grid gap-5 md:grid-cols-2">
           {services.map((service, index) => (
             <Reveal key={service.slug} delay={index * 0.06}>
@@ -29,4 +31,3 @@ export function ServicesGrid({
     </section>
   );
 }
-

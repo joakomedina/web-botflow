@@ -2,11 +2,26 @@ import Image from "next/image";
 import type { Project } from "@/data/projects";
 import { cn } from "@/lib/utils";
 
-type ProjectCardProps = {
-  project: Project;
+type ProjectCardLabels = {
+  completed: string;
+  inProgress: string;
+  goal: string;
+  imageAltPrefix: string;
 };
 
-export function ProjectCard({ project }: ProjectCardProps) {
+type ProjectCardProps = {
+  project: Project;
+  labels?: ProjectCardLabels;
+};
+
+const defaultLabels: ProjectCardLabels = {
+  completed: "Realizado",
+  inProgress: "En desarrollo",
+  goal: "Objetivo:",
+  imageAltPrefix: "Imagen del proyecto"
+};
+
+export function ProjectCard({ project, labels = defaultLabels }: ProjectCardProps) {
   const rawRatio =
     project.imageWidth && project.imageHeight
       ? project.imageWidth / project.imageHeight
@@ -23,7 +38,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <div className="relative h-full w-full">
             <Image
               src={project.image}
-              alt={`Imagen del proyecto ${project.title}`}
+              alt={`${labels.imageAltPrefix} ${project.title}`}
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-contain object-center p-1"
@@ -40,7 +55,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               : "bg-[color:var(--color-secondary)]/15 text-[color:var(--color-dark)]"
           )}
         >
-          {project.status === "realizado" ? "Realizado" : "En desarrollo"}
+          {project.status === "realizado" ? labels.completed : labels.inProgress}
         </span>
         <p className="text-xs font-medium uppercase tracking-[0.12em] text-[color:var(--color-muted)]">
           {project.type}
@@ -67,7 +82,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         ))}
       </ul>
       <p className="mt-5 rounded-xl border border-[color:var(--panel-border)] bg-[color:var(--color-accent)]/15 p-4 text-sm leading-relaxed text-[color:var(--color-muted)]">
-        <strong className="font-semibold text-[color:var(--color-dark)]">Objetivo:</strong>{" "}
+        <strong className="font-semibold text-[color:var(--color-dark)]">{labels.goal}</strong>{" "}
         {project.goal}
       </p>
     </article>
