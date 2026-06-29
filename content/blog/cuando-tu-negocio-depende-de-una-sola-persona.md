@@ -96,4 +96,4 @@ Con ese bloque inicial, el negocio ya mejora continuidad, reduce estrés operati
 
 Un negocio sano no funciona porque alguien “lo salva” cada día. Funciona porque tiene sistema.
 
-Si quieres empezar a ordenar esa base y dejar de depender de una sola persona, puedes hacerlo con una implementación guiada y por fases a través del [paquete Tu aliado tecnológico](/aliado-tecnologico).
+Si quieres empezar a ordenar esa base y dejar de depender de una sola persona, puedes hacerlo automatizando el proceso más crítico en 15 días con [Sprint 15](/sprint-15).

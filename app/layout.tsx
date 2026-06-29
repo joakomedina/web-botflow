@@ -13,7 +13,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: {
-    default: "Sistemas digitales para automatizar negocios | botflow.top",
+    default: "Recupera tiempo para hacer crecer tu negocio | botflow.top",
     template: "%s | botflow.top"
   },
   description: siteConfig.description,
@@ -22,20 +22,20 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
     siteName: siteConfig.brand,
-    title: "Sistemas digitales para automatizar negocios | botflow.top",
+    title: "Recupera tiempo para hacer crecer tu negocio | botflow.top",
     description: siteConfig.description,
     images: [
       {
         url: "/open-graph-botflow.jpeg",
         width: 1312,
         height: 736,
-        alt: "botflow.top - Sistemas digitales para automatizar negocios"
+        alt: "botflow.top - Recupera tiempo para hacer crecer tu negocio"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sistemas digitales para automatizar negocios | botflow.top",
+    title: "Recupera tiempo para hacer crecer tu negocio | botflow.top",
     description: siteConfig.description,
     images: ["/open-graph-botflow.jpeg"]
   },
@@ -63,7 +63,7 @@ type RootLayoutProps = Readonly<{
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="es">
+    <html lang="es" data-scroll-behavior="smooth">
       <body className={inter.className}>
         <script
           type="application/ld+json"

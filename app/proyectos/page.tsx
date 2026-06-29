@@ -6,9 +6,9 @@ import { SectionTitle } from "@/components/SectionTitle";
 import { completedProjects, inProgressProjects } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Proyectos realizados y en desarrollo",
+  title: "Casos reales: problemas resueltos con automatización",
   description:
-    "Listado de proyectos de desarrollo web, automatización e IA implementados o en fase de construcción en botflow.top.",
+    "No mostramos proyectos, mostramos problemas resueltos: casos reales de automatización, desarrollo web e IA implementados por botflow.top.",
   alternates: {
     canonical: "/proyectos"
   }
@@ -18,10 +18,10 @@ export default function ProyectosPage() {
   return (
     <>
       <PageHero
-        eyebrow="Proyectos"
-        title="Casos construidos para conectar procesos, tecnología y automatización"
-        description="Proyectos en producción y en desarrollo con un enfoque común: crear sistemas digitales útiles para operación real."
-        breadcrumbs={[{ label: "Inicio", href: "/" }, { label: "Proyectos" }]}
+        eyebrow="Casos reales"
+        title="No mostramos proyectos. Mostramos problemas resueltos."
+        description="Cada caso responde a la misma lógica: un proceso manual que costaba tiempo, resuelto con automatización e IA."
+        breadcrumbs={[{ label: "Inicio", href: "/" }, { label: "Casos reales" }]}
         primaryCta={{ label: "Iniciar nuevo proyecto", href: "/contacto" }}
       />
 

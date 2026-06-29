@@ -4,6 +4,7 @@ import { siteConfig } from "@/lib/site";
 
 const routes = [
   "",
+  "/sprint-15",
   "/blog",
   "/servicios",
   "/servicios/desarrollo-web",
@@ -39,7 +40,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${siteConfig.siteUrl}${route}`,
     lastModified: now,
     changeFrequency: route === "" || route === "/blog" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : route === "/blog" ? 0.8 : 0.7
+    priority:
+      route === ""
+        ? 1
+        : route === "/sprint-15"
+          ? 0.9
+          : route === "/blog"
+            ? 0.8
+            : 0.7
   }));
 
   const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({

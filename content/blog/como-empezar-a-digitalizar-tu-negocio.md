@@ -37,7 +37,7 @@ En la práctica, suele funcionar este orden:
 
 Con solo ese primer bloque, el negocio pasa de reaccionar a gestionar.
 
-Si quieres avanzar con una ruta guiada y aplicada a tu caso, puedes empezar por el [paquete Tu aliado tecnológico](/aliado-tecnologico), diseñado para crear esa base digital inicial sin añadir más complejidad.
+Si quieres avanzar con una ruta guiada y aplicada a tu caso, puedes empezar por [Sprint 15](/sprint-15), diseñado para automatizar esa primera fricción en solo 15 días.
 
 ## Automatizar no es hacer todo automático
 
@@ -57,7 +57,7 @@ Digitalizar bien no es correr más. Es reducir fricción para que el esfuerzo di
 
 Cuando el sistema está bien planteado, el equipo respira, el seguimiento mejora y el negocio deja de depender del caos para avanzar.
 
-Si quieres dar ese primer paso con acompañamiento, aquí puedes ver cómo funciona [Tu aliado tecnológico](/aliado-tecnologico).
+Si quieres dar ese primer paso con acompañamiento, aquí puedes ver cómo funciona [Sprint 15](/sprint-15).
 
 ## Preguntas frecuentes sobre cómo digitalizar un negocio
 
