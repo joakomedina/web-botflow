@@ -90,15 +90,13 @@ export default function SobreMiPage() {
               </ul>
               <div className="mt-6 rounded-xl border border-[color:var(--panel-border)] bg-[color:var(--color-bg)] p-4">
                 <p className="text-sm leading-relaxed text-[color:var(--color-muted)]">
-                  Este enfoque impulsó la creación del servicio{" "}
-                  <strong className="font-semibold text-[color:var(--color-dark)]">
-                    Tu aliado tecnológico
-                  </strong>
-                  : una base digital pensada para acompañar a quienes están empezando a ordenar su
-                  sistema de trabajo.
+                  Este enfoque impulsó la creación de{" "}
+                  <strong className="font-semibold text-[color:var(--color-dark)]">Sprint 15</strong>: un
+                  programa de 15 días para automatizar el proceso que más tiempo le hace perder a tu
+                  empresa.
                 </p>
-                <Link href="/aliado-tecnologico" className="btn-base btn-primary mt-4 px-4 py-2 text-xs md:text-sm">
-                  Ver servicio
+                <Link href="/sprint-15" className="btn-base btn-primary mt-4 px-4 py-2 text-xs md:text-sm">
+                  Conocer Sprint 15
                 </Link>
               </div>
             </article>

@@ -1,6 +1,7 @@
 type SectionTitleProps = {
   eyebrow?: string;
   title: string;
+  tagline?: string;
   description?: string;
   centered?: boolean;
 };
@@ -8,6 +9,7 @@ type SectionTitleProps = {
 export function SectionTitle({
   eyebrow,
   title,
+  tagline,
   description,
   centered = false
 }: SectionTitleProps) {
@@ -23,6 +25,11 @@ export function SectionTitle({
       <h2 className="text-balance text-3xl font-semibold leading-tight text-[color:var(--color-dark)] md:text-4xl">
         {title}
       </h2>
+      {tagline ? (
+        <p className="mt-3 text-pretty text-lg font-semibold text-[color:var(--color-primary)]">
+          {tagline}
+        </p>
+      ) : null}
       {description ? (
         <p className="mt-4 text-pretty text-base leading-relaxed text-[color:var(--color-muted)] md:text-lg">
           {description}

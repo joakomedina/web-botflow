@@ -10,9 +10,9 @@ export const siteConfig = {
   email: contactEmail,
   whatsappRaw,
   whatsappDisplay: "+34 747 424 451",
-  claim: "Construyo sistemas digitales que automatizan tu negocio.",
+  claim: "Recuperamos tiempo para que tu empresa crezca.",
   description:
-    "Desarrollo web, aplicaciones, automatización e inteligencia artificial para reducir tareas manuales y escalar operaciones."
+    "En 15 días automatizamos el proceso que más tiempo hace perder a tu empresa, mediante automatización e inteligencia artificial."
 };
 
 export const seoKeywords = [
@@ -28,10 +28,10 @@ export const seoKeywords = [
 
 export const navigationLinks = [
   { label: "Inicio", href: "/" },
-  { label: "Servicios", href: "/servicios" },
-  { label: "Proyectos", href: "/proyectos" },
-  { label: "Blog", href: "/blog" },
-  { label: "Sobre mí", href: "/sobre-mi" },
+  { label: "Sprint 15", href: "/sprint-15" },
+  { label: "Cómo funciona", href: "/#como-funciona" },
+  { label: "Casos reales", href: "/proyectos" },
+  { label: "Recursos", href: "/blog" },
   { label: "Contacto", href: "/contacto" }
 ];
 

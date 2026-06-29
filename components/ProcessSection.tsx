@@ -3,6 +3,7 @@ import { Reveal } from "./Reveal";
 import { SectionTitle } from "./SectionTitle";
 
 type ProcessSectionProps = {
+  id?: string;
   eyebrow?: string;
   title?: string;
   description?: string;
@@ -14,6 +15,7 @@ type ProcessSectionProps = {
 };
 
 export function ProcessSection({
+  id,
   eyebrow = "Proceso",
   title = "Cómo trabajo para convertir una necesidad en una solución operativa",
   description = "El enfoque prioriza ejecución y resultado, no complejidad innecesaria.",
@@ -21,7 +23,7 @@ export function ProcessSection({
   steps = processSteps
 }: ProcessSectionProps) {
   return (
-    <section className="py-18">
+    <section id={id} className="py-18">
       <div className="container-shell">
         <SectionTitle
           eyebrow={eyebrow}

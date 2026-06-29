@@ -5,24 +5,24 @@ export type ProcessStep = {
 
 export const processSteps: ProcessStep[] = [
   {
-    title: "Diagnóstico",
+    title: "Analizamos tu empresa",
     description:
-      "Analizo el contexto del negocio, los cuellos de botella y los procesos que hoy consumen más tiempo."
+      "Revisamos cómo trabaja hoy tu equipo y dónde se pierde más tiempo en tareas manuales."
   },
   {
-    title: "Diseño de solución",
+    title: "Elegimos el proceso con mayor impacto",
     description:
-      "Defino una arquitectura clara combinando web, automatización, integraciones y componentes de IA según prioridad."
+      "Identificamos el cuello de botella que, al resolverlo, te devuelve más horas con menos esfuerzo."
   },
   {
-    title: "Implementación",
+    title: "Lo automatizamos",
     description:
-      "Construyo la solución en iteraciones cortas, con entregables visibles y foco en uso real desde el primer release."
+      "Diseñamos, desarrollamos e implantamos la automatización en Sprint 15, sin interrumpir tu operación diaria."
   },
   {
-    title: "Optimización",
+    title: "Recuperas tiempo",
     description:
-      "Mido resultados, ajusto flujos y evoluciona el sistema para sostener rendimiento y crecimiento operativo."
+      "Tu equipo deja de hacer manualmente lo que ya está automatizado y puede dedicarse a hacer crecer el negocio."
   }
 ];
 
