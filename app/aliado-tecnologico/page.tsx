@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     canonical: "/aliado-tecnologico"
   },
   openGraph: {
-    title: "Soy tu aliado tecnológico | botflow.top",
+    title: "Soy tu aliado tecnológico | botflowstudio.com",
     description:
       "Servicio para autónomos y pequeños negocios que necesitan organizar su base digital y empezar a automatizar procesos sin complicarse.",
     images: [
@@ -82,13 +82,13 @@ export const metadata: Metadata = {
         url: "/open-graph-soy-tu-aliado-tecnologico.jpeg",
         width: 1376,
         height: 768,
-        alt: "Soy tu aliado tecnológico - botflow.top"
+        alt: "Soy tu aliado tecnológico - botflowstudio.com"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Soy tu aliado tecnológico | botflow.top",
+    title: "Soy tu aliado tecnológico | botflowstudio.com",
     description:
       "Servicio para autónomos y pequeños negocios que necesitan organizar su base digital y empezar a automatizar procesos sin complicarse.",
     images: ["/open-graph-soy-tu-aliado-tecnologico.jpeg"]

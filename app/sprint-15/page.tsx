@@ -8,7 +8,7 @@ import { Sprint15Section } from "@/components/Sprint15Section";
 export const metadata: Metadata = {
   title: "Sprint 15: automatiza tu proceso más lento en 15 días",
   description:
-    "Sprint 15 es el programa de botflow.top para diagnosticar, diseñar e implantar en 15 días la automatización que más tiempo le devuelve a tu empresa.",
+    "Sprint 15 es el programa de botflowstudio.com para diagnosticar, diseñar e implantar en 15 días la automatización que más tiempo le devuelve a tu empresa.",
   alternates: {
     canonical: "/sprint-15"
   }

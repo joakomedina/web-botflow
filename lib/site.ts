@@ -1,11 +1,11 @@
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://botflow.top";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://botflowstudio.com";
 const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "joaquinaarvelom@gmail.com";
 const whatsappRaw = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "34747424451";
 
 export const siteConfig = {
-  domain: "botflow.top",
+  domain: "botflowstudio.com",
   siteUrl,
-  brand: "botflow.top",
+  brand: "botflowstudio.com",
   owner: "Joaquin Arvelo",
   email: contactEmail,
   whatsappRaw,
@@ -23,7 +23,7 @@ export const seoKeywords = [
   "sistemas digitales para empresas",
   "automatización con n8n",
   "agentes de IA para negocios",
-  "botflow.top"
+  "botflowstudio.com"
 ];
 
 export const navigationLinks = [

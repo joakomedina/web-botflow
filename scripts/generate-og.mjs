@@ -47,7 +47,7 @@ function renderSvg({ titleLines, subtitleLines, badge, badgeX = 860, badgeY = 52
   <circle cx="1060" cy="130" r="260" fill="#3F54B5" opacity="0.45" />
   <circle cx="90" cy="540" r="330" fill="#0F7D95" opacity="0.35" />
 
-  <text x="76" y="100" fill="#ECF3FF" font-size="46" font-weight="700" font-family="Segoe UI, Inter, Arial, sans-serif">botflow.top</text>
+  <text x="76" y="100" fill="#ECF3FF" font-size="46" font-weight="700" font-family="Segoe UI, Inter, Arial, sans-serif">botflowstudio.com</text>
   ${titleMarkup}
   ${subtitleMarkup}
 

@@ -16,7 +16,7 @@
   - `/contacto`
 - Integración de formulario de contacto con envío asistido por WhatsApp y email.
 - Carga de catálogo de servicios y portafolio de proyectos realizados y en desarrollo.
-- Diseño e integración de logo SVG para marca `botflow.top`.
+- Diseño e integración de logo SVG para marca `botflowstudio.com`.
 - Añadida documentación base:
   - `README.md`
   - `ARCHITECTURE.md`

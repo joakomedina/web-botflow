@@ -7,7 +7,7 @@ import { services } from "@/data/services";
 export const metadata: Metadata = {
   title: "Servicios de desarrollo web, apps, automatización e IA",
   description:
-    "Servicios de botflow.top para construir sistemas digitales orientados a negocio: desarrollo web, aplicaciones, automatizaciones e inteligencia artificial.",
+    "Servicios de botflowstudio.com para construir sistemas digitales orientados a negocio: desarrollo web, aplicaciones, automatizaciones e inteligencia artificial.",
   alternates: {
     canonical: "/servicios"
   }

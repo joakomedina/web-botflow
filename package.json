@@ -2,7 +2,7 @@
   "name": "web-joaquin",
   "version": "1.0.0",
   "private": true,
-  "description": "Sitio profesional de Joaquin Arvelo para botflow.top",
+  "description": "Sitio profesional de Joaquin Arvelo para botflowstudio.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

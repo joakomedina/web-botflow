@@ -8,7 +8,7 @@ import { completedProjectsEn, inProgressProjectsEn } from "@/data/projects-en";
 export const metadata: Metadata = {
   title: "Delivered and in-progress projects",
   description:
-    "Portfolio of web development, automation, and AI projects delivered or currently under development at botflow.top.",
+    "Portfolio of web development, automation, and AI projects delivered or currently under development at botflowstudio.com.",
   alternates: {
     canonical: "/en/proyectos"
   }

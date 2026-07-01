@@ -13,8 +13,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: {
-    default: "Recupera tiempo para hacer crecer tu negocio | botflow.top",
-    template: "%s | botflow.top"
+    default: "Recupera tiempo para hacer crecer tu negocio | botflowstudio.com",
+    template: "%s | botflowstudio.com"
   },
   description: siteConfig.description,
   keywords: seoKeywords,
@@ -22,20 +22,20 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
     siteName: siteConfig.brand,
-    title: "Recupera tiempo para hacer crecer tu negocio | botflow.top",
+    title: "Recupera tiempo para hacer crecer tu negocio | botflowstudio.com",
     description: siteConfig.description,
     images: [
       {
         url: "/open-graph-botflow.jpeg",
         width: 1312,
         height: 736,
-        alt: "botflow.top - Recupera tiempo para hacer crecer tu negocio"
+        alt: "botflowstudio.com - Recupera tiempo para hacer crecer tu negocio"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Recupera tiempo para hacer crecer tu negocio | botflow.top",
+    title: "Recupera tiempo para hacer crecer tu negocio | botflowstudio.com",
     description: siteConfig.description,
     images: ["/open-graph-botflow.jpeg"]
   },

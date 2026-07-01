@@ -1,4 +1,4 @@
-﻿# botflow.top - Web profesional de Joaquin Arvelo
+﻿# botflowstudio.com - Web profesional de Joaquin Arvelo
 
 Web en Next.js para posicionar servicios de desarrollo web, aplicaciones, automatización de procesos e implementación de inteligencia artificial.
 
@@ -80,4 +80,4 @@ Este proyecto está preparado para despliegue estándar de Node.js en VPS con Co
 
 - No usa features específicas de Vercel.
 - Compatible con reverse proxy y SSL gestionados por Coolify.
-- Recomendado: configurar `NEXT_PUBLIC_SITE_URL=https://botflow.top` en variables de entorno del entorno de producción.
+- Recomendado: configurar `NEXT_PUBLIC_SITE_URL=https://botflowstudio.com` en variables de entorno del entorno de producción.

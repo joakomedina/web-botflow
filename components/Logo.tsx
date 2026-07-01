@@ -18,7 +18,7 @@ export function Logo({ className, withTagline = false }: LogoProps) {
       )}
       aria-label="Ir al inicio"
     >
-      <Image src="/logo-botflow.svg" alt="Logo de botflow.top" width={36} height={36} priority />
+      <Image src="/logo-botflow.svg" alt="Logo de botflowstudio.com" width={36} height={36} priority />
       <span className="flex flex-col leading-none">
         <span className="text-sm font-semibold tracking-wide text-[color:var(--color-dark)]">
           {siteConfig.brand}

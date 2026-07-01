@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     canonical: "/en/aliado-tecnologico"
   },
   openGraph: {
-    title: "Your technology ally | botflow.top",
+    title: "Your technology ally | botflowstudio.com",
     description:
       "Service for freelancers and small businesses that need to organize their digital base and start automating without technical overwhelm.",
     images: [
@@ -76,13 +76,13 @@ export const metadata: Metadata = {
         url: "/open-graph-soy-tu-aliado-tecnologico.jpeg",
         width: 1376,
         height: 768,
-        alt: "Your technology ally - botflow.top"
+        alt: "Your technology ally - botflowstudio.com"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Your technology ally | botflow.top",
+    title: "Your technology ally | botflowstudio.com",
     description:
       "Service for freelancers and small businesses that need to organize their digital base and start automating without technical overwhelm.",
     images: ["/open-graph-soy-tu-aliado-tecnologico.jpeg"]

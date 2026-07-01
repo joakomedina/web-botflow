@@ -130,7 +130,7 @@ export const projects: Project[] = [
       "Transformar procesos manuales de análisis en flujos automatizados con menor tiempo de entrega."
   },
   {
-    title: "Web personal de servicios tecnológicos (botflow.top)",
+    title: "Web personal de servicios tecnológicos (botflowstudio.com)",
     type: "Desarrollo web + posicionamiento profesional",
     status: "en_desarrollo",
     technologies: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
