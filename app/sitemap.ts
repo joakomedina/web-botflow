@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/site";
 const routes = [
   "",
   "/sprint-15",
+  "/metodologia",
   "/blog",
   "/servicios",
   "/servicios/desarrollo-web",
