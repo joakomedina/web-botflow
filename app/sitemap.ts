@@ -29,7 +29,8 @@ const enRoutes = [
   "/en/proyectos",
   "/en/sobre-mi",
   "/en/contacto",
-  "/en/aliado-tecnologico"
+  "/en/aliado-tecnologico",
+  "/en/metodologia"
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

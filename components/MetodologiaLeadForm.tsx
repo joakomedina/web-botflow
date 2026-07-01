@@ -4,7 +4,11 @@ import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { siteConfig } from "@/lib/site";
 
-export function MetodologiaLeadForm() {
+type MetodologiaLeadFormProps = {
+  locale?: "es" | "en";
+};
+
+export function MetodologiaLeadForm({ locale = "es" }: MetodologiaLeadFormProps) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "success">("idle");
 
@@ -44,18 +48,27 @@ export function MetodologiaLeadForm() {
     setStatus("success");
   }
 
+  const t = {
+    success: locale === "en" ? "Your download has started!" : "¡Tu descarga ha comenzado!",
+    fallback: locale === "en" ? "click here" : "pulsa aquí",
+    fallbackPrefix: locale === "en" ? "If it doesn't start automatically, " : "Si no se inicia sola, ",
+    placeholder: locale === "en" ? "your@company.com" : "tu@empresa.com",
+    sending: locale === "en" ? "Sending..." : "Enviando...",
+    button: locale === "en" ? "Download presentation" : "Descargar presentación"
+  };
+
   if (status === "success") {
     return (
       <div className="rounded-2xl border border-[color:var(--color-accent)] bg-[color:var(--color-accent)]/10 px-8 py-10 text-center">
-        <p className="text-2xl font-semibold text-white">¡Tu descarga ha comenzado!</p>
+        <p className="text-2xl font-semibold text-white">{t.success}</p>
         <p className="mt-3 text-white/70">
-          Si no se inicia sola,{" "}
+          {t.fallbackPrefix}
           <a
             href="/ModeloNegocioVF.pdf"
             download
             className="font-semibold text-[color:var(--color-accent)] underline underline-offset-2"
           >
-            pulsa aquí
+            {t.fallback}
           </a>
           .
         </p>
@@ -69,7 +82,7 @@ export function MetodologiaLeadForm() {
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        placeholder="tu@empresa.com"
+        placeholder={t.placeholder}
         required
         className="flex-1 rounded-xl border border-white/25 bg-white/10 px-5 py-4 text-base text-white placeholder-white/40 outline-none transition focus:border-white/60 focus:bg-white/15"
       />
@@ -78,7 +91,7 @@ export function MetodologiaLeadForm() {
         disabled={status === "sending"}
         className="btn-base btn-light whitespace-nowrap px-7 py-4 disabled:opacity-60"
       >
-        {status === "sending" ? "Enviando..." : "Descargar presentación"}
+        {status === "sending" ? t.sending : t.button}
       </button>
     </form>
   );
