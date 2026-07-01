@@ -29,6 +29,7 @@ export const seoKeywords = [
 export const navigationLinks = [
   { label: "Inicio", href: "/" },
   { label: "Sprint 15", href: "/sprint-15" },
+  { label: "Metodología", href: "/metodologia" },
   { label: "Cómo funciona", href: "/#como-funciona" },
   { label: "Casos reales", href: "/proyectos" },
   { label: "Recursos", href: "/blog" },
