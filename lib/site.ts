@@ -1,5 +1,5 @@
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://botflowstudio.com";
-const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "joaquinaarvelom@gmail.com";
+const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "blueprint@botflowstudio.com";
 const whatsappRaw = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "34747424451";
 
 export const siteConfig = {
