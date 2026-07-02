@@ -10,6 +10,8 @@ type CaseStudiesSectionProps = {
   description?: string;
   buttonLabel?: string;
   buttonHref?: string;
+  beforeLabel?: string;
+  afterLabel?: string;
 };
 
 export function CaseStudiesSection({
@@ -18,7 +20,9 @@ export function CaseStudiesSection({
   title = "No enseñamos proyectos. Enseñamos problemas resueltos.",
   description = "Cada caso responde a la misma lógica: un proceso que costaba tiempo, resuelto con automatización.",
   buttonLabel = "Solicitar diagnóstico gratuito",
-  buttonHref = "/contacto"
+  buttonHref = "/contacto",
+  beforeLabel = "Antes",
+  afterLabel = "Después"
 }: CaseStudiesSectionProps) {
   return (
     <section className="py-18">
@@ -31,14 +35,14 @@ export function CaseStudiesSection({
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[color:var(--color-secondary)]">
                   {caseStudy.tag}
                 </p>
-                <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-red-600">Antes</p>
+                <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-red-600">{beforeLabel}</p>
                 <p className="mt-2 text-pretty text-base font-medium italic leading-relaxed text-[color:var(--color-dark)]">
                   “{caseStudy.before}”
                 </p>
                 <span aria-hidden className="my-3 self-center text-lg leading-none text-[color:var(--color-muted)]">
                   ↓
                 </span>
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-600">Después</p>
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-600">{afterLabel}</p>
                 <p className="mt-2 text-pretty text-base font-medium italic leading-relaxed text-[color:var(--color-dark)]">
                   “{caseStudy.after}”
                 </p>

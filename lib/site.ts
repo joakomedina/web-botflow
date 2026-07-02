@@ -37,10 +37,10 @@ export const navigationLinks = [
 ];
 
 export const navigationLinksEn = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/servicios" },
-  { label: "Projects", href: "/proyectos" },
-  { label: "Blog", href: "/blog" },
-  { label: "About", href: "/sobre-mi" },
-  { label: "Contact", href: "/contacto" }
+  { label: "Home", href: "/en" },
+  { label: "Sprint 15", href: "/en/sprint-15" },
+  { label: "Methodology", href: "/en/metodologia" },
+  { label: "Real cases", href: "/en/proyectos" },
+  { label: "Resources", href: "/en/blog" },
+  { label: "Contact", href: "/en/contacto" }
 ];

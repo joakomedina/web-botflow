@@ -20,6 +20,7 @@ const routes = [
 
 const enRoutes = [
   "/en",
+  "/en/sprint-15",
   "/en/blog",
   "/en/servicios",
   "/en/servicios/desarrollo-web",

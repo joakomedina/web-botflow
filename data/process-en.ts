@@ -1,22 +1,22 @@
 export const processStepsEn = [
   {
-    title: "Diagnosis",
+    title: "We analyse your company",
     description:
-      "I analyze your business context, bottlenecks, and the processes currently consuming the most time."
+      "We understand how the business really works: people, processes, information, and tools. Before proposing any technology."
   },
   {
-    title: "Solution Design",
+    title: "We choose the highest-impact process",
     description:
-      "I define a clear architecture combining web, automation, integrations, and AI components based on priority."
+      "We identify the bottleneck that is costing the most time and design the right solution — not necessarily the most complex one."
   },
   {
-    title: "Implementation",
+    title: "We automate it",
     description:
-      "I build the solution in short iterations, with visible deliverables and focus on real usage from the first release."
+      "In 15 days we build and deploy the automation. No endless projects. Measurable results from the first sprint."
   },
   {
-    title: "Optimization",
+    title: "You recover time",
     description:
-      "I measure outcomes, adjust workflows, and evolve the system to sustain performance and operational growth."
+      "Your team stops doing what a machine can do. That time goes back to what only people can do."
   }
 ];
