@@ -6,7 +6,7 @@ const NEW_DOMAIN = "botflowstudio.com";
 
 export function middleware(request: NextRequest) {
   const host = request.headers.get("host") ?? "";
-  if (host === OLD_DOMAIN || host === `www.${OLD_DOMAIN}`) {
+  if (host === OLD_DOMAIN || host === `www.${OLD_DOMAIN}` || host === `www.${NEW_DOMAIN}`) {
     const url = request.nextUrl.clone();
     url.hostname = NEW_DOMAIN;
     url.port = "";
