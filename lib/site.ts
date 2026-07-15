@@ -1,6 +1,8 @@
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://botflowstudio.com";
 const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "blueprint@botflowstudio.com";
 const whatsappRaw = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "34747424451";
+const bookingUrl =
+  process.env.NEXT_PUBLIC_BOOKING_URL ?? "https://calendar.app.google/uh7wXgcEMjkvaTPP8";
 
 export const siteConfig = {
   domain: "botflowstudio.com",
@@ -10,6 +12,7 @@ export const siteConfig = {
   email: contactEmail,
   whatsappRaw,
   whatsappDisplay: "+34 747 424 451",
+  bookingUrl,
   claim: "Recuperamos tiempo para que tu empresa crezca.",
   description:
     "En 15 días automatizamos el proceso que más tiempo hace perder a tu empresa, mediante automatización e inteligencia artificial."

@@ -16,7 +16,7 @@ const metodologiaSteps = [
   {
     number: "01",
     label: "Gratuita",
-    title: "Sesión Estratégica",
+    title: "Descubrimiento Blueprint",
     description:
       "Comprendemos cómo funciona tu empresa antes de proponer nada. Analizamos personas, procesos, información, herramientas y tecnología.",
     note: "Sin compromiso. Sin vender tecnología."
@@ -368,7 +368,7 @@ export default function MetodologiaPage() {
                   Paso 1
                 </p>
                 <p className="mt-2 text-lg font-semibold text-[color:var(--color-dark)]">
-                  Sesión Estratégica
+                  Descubrimiento Blueprint
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-[color:var(--color-muted)]">
                   Comprendemos tu empresa, identificamos dónde se pierde más tiempo.
@@ -447,7 +447,7 @@ export default function MetodologiaPage() {
                   href="/contacto"
                   className="btn-base btn-light mt-3 inline-flex px-6 py-3"
                 >
-                  Solicitar sesión estratégica gratuita
+                  Solicitar Descubrimiento Blueprint gratuito
                 </Link>
               </div>
             </div>
